@@ -13,6 +13,10 @@ section {
 .text {
     padding: 0 50px;
 }
+.copyleft {
+    display: inline-block;
+    transform: scaleX(-1);
+}
 
 /*********
  * NAV   *
@@ -24,6 +28,7 @@ section {
     height: 48px;
     width: 100%;
     padding-left: 25px;
+    z-index: 1;
 }
 #top-nav a {
     color: #ddd;

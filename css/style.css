@@ -1,0 +1,163 @@
+body {
+    font-size: 24px;
+}
+
+section {
+    min-height: 100vh;
+    border-bottom: 1px solid transparent;
+    padding-top: 3em;
+    box-sizing: border-box;
+}
+
+
+.text {
+    padding: 0 50px;
+}
+
+/*********
+ * NAV   *
+ *********/
+
+#top-nav {
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    height: 48px;
+    width: 100%;
+    padding-left: 25px;
+}
+#top-nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0.5em 25px;
+    position: relative;
+    top: 0.5em;
+}
+#top-nav a.highlight {
+    text-decoration: underline;
+}
+
+/*********
+ * Landing
+ *********/
+
+#landing {
+    background-image: url(../img/riesenrad01.jpg);
+    background-repeat:  no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+#logo {
+    padding-top: 50vh;
+    width: 128px;
+    height: 127px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+#slogan {
+    padding-top: 5vh;
+    display: inline-block;
+    background: rgba(0,0,0, 0.2);
+    padding: 10px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+
+}
+#slogan:before {
+    content: '“';
+}
+#slogan:after {
+    content: '”';
+}
+
+.fb-page.fb_iframe_widget {
+    position: absolute;
+    left: 50px;
+    top: 25vh;
+    height: 50vh;
+}
+#attenzione {
+    position: absolute;
+    top: 10vh;
+    right: 50px;
+    background: #FEEF00;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease-out;
+}
+#attenzione:hover {
+    transform: rotate(365deg);
+}
+#attenzione div {
+    padding-top: 30px;
+    font-size: 16px;
+
+}
+
+/*********
+ * ABOUT *
+ *********/
+
+#about {
+    background: #EF8696;
+}
+
+
+/*********
+ * Contact *
+ *********/
+
+#contact {
+    background: #91F8B6;
+}
+
+
+
+/*********
+ * Video *
+ *********/
+
+#video {
+    background: #4E4E4E;
+}
+#video iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*********
+ * Photos *
+ *********/
+
+#photos {
+    background: #8B7474;
+}
+#photos iframe, #photos img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+}
+
+
+/*********
+ * Footer *
+ *********/
+
+footer {
+    padding: 50px;
+}
+
+
+
+
+@media (max-width: 600px) {
+  #top-nav {
+    visibility: hidden;
+  }
+}
+
+
+

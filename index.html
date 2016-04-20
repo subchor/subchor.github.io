@@ -27,7 +27,11 @@
 <section id="landing">
     <img src="img/logo.svg" id="logo">
     <h2 id="slogan">We sing, we lubricate</h2>
-    <div class="fb-page" data-href="https://www.facebook.com/subchor/" data-tabs="timeline" data-width="250" data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/subchor/"><a href="https://www.facebook.com/subchor/">Subchor</a></blockquote></div></div>
+    <div class="fb-page" data-href="https://www.facebook.com/subchor/" data-tabs="timeline" data-width="250" data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+        <div class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/subchor/">Aktuelle Infos auf unserer <a href="https://www.facebook.com/subchor/">Facebook-Seite</a></blockquote>
+        </div>
+    </div>
     <div id="attenzione">
         <div>28.5.2016<br>
         Sonnenland
@@ -89,7 +93,7 @@
     ]
 
     document.getElementById("slogan")
-        .innerText = slogans[rand(slogans.length)]
+        .innerText = slogans[rand(slogans.length-1)]
 
     document.getElementById("landing")
         .classList.add("bg"+rand(1))

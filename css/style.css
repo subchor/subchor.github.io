@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 24px;
 }
@@ -6,9 +10,14 @@ section {
     min-height: 100vh;
     border-bottom: 1px solid transparent;
     padding-top: 3em;
-    box-sizing: border-box;
 }
 
+
+@keyframes waitfadein {
+    0% { opacity: 0; }
+    90% { opacity: 0; }
+    100%   { opacity: 1; }
+}
 
 .text {
     padding: 0 50px;
@@ -34,7 +43,7 @@ section {
     color: #ddd;
     text-decoration: none;
     font-size: 24px;
-    padding: 0.5em 25px;
+    padding: 0 25px;
     position: relative;
     top: 0.5em;
 }
@@ -61,7 +70,6 @@ section {
 #logo {
     padding-top: 50vh;
     width: 128px;
-    height: 127px;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -82,11 +90,18 @@ section {
     content: '”';
 }
 
-.fb-page.fb_iframe_widget {
+.fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
     position: absolute;
     left: 50px;
     top: 25vh;
     height: 50vh;
+}
+/* fallback when Facebook widget is blocked*/
+.fb-xfbml-parse-ignore {
+    width: 250px;
+    padding: 100px 10px;
+    background: rgba(255,255,255,0.7);
+    animation: waitfadein 5s; // give fb widget 4s to load before fading in
 }
 #attenzione {
     position: absolute;

@@ -77,6 +77,10 @@
 </footer>
 
 <script type="text/javascript">
+    function rand(max) {
+        return Math.round(Math.random()*max)
+    }
+
     var slogans = [
         "We sing, we lubricate",
         "Ein sehr interessanter Hobbychor.",
@@ -84,8 +88,11 @@
         "a.k.a. Räudiger Arbeiterinnenchor 3000 (Jackson)"
     ]
 
-    document.getElementById("slogan").innerText =
-            slogans[parseInt(Math.random()*slogans.length)]
+    document.getElementById("slogan")
+        .innerText = slogans[rand(slogans.length)]
+
+    document.getElementById("landing")
+        .classList.add("bg"+rand(1))
 
 </script>
 

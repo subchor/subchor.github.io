@@ -47,10 +47,16 @@ section {
  *********/
 
 #landing {
-    background-image: url(../img/riesenrad01.jpg);
+    background: #99B1BD;
     background-repeat:  no-repeat;
     background-size: cover;
     text-align: center;
+}
+#landing.bg0 {
+    background-image: url(../img/riesenrad01.jpg);
+}
+#landing.bg1 {
+    background-image: url(../img/wohltemperiert.jpg);
 }
 #logo {
     padding-top: 50vh;

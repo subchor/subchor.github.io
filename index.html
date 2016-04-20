@@ -1,9 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>subchor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/gumshoe.min.js"></script>
 </head>
 <body>
 
@@ -16,12 +20,14 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<nav id="top-nav">
-    <a href="#landing">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Kontakt</a>
-    <a href="#video">Videos</a>
-    <a href="#photos">Fotos</a>
+<nav id="top-nav" data-gumshoe-header>
+    <ul data-gumshoe>
+        <li><a href="#landing" data-scroll>Home</a></li>
+        <li><a data-scroll href="#about">About</a></li>
+        <li><a data-scroll href="#contact">Kontakt</a></li>
+        <li><a data-scroll href="#video">Videos</a></li>
+        <li><a data-scroll href="#photos">Fotos</a></li>
+    </ul>
 </nav>
 
 <section id="landing">
@@ -98,6 +104,8 @@
     document.getElementById("landing")
         .classList.add("bg"+rand(1))
 
+    smoothScroll.init()
+    gumshoe.init()
 </script>
 
 </body>

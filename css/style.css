@@ -165,10 +165,32 @@ section {
 #photos {
     background: #8B7474;
 }
-#photos iframe, #photos img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block;
+#photos > div {
+    text-align: center;
+}
+#photos img {
+    max-height: 80vh;
+    max-width: 90vw;
+}
+.photo-nav {
+    line-height: 80vh;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #aaa;
+}
+.photo-nav:hover {
+    color: #fff;
+}
+.photo-nav.prev {
+    position: relative;
+    padding-right: 200px;
+    margin-right: -200px;
+}
+.photo-nav.next {
+    position: relative;
+    padding-left: 200px;
+    margin-left: -200px;
 }
 
 
@@ -180,6 +202,11 @@ footer {
     padding: 50px;
 }
 
+footer .legal {
+    font-size: 0.5em;
+    color: #444;
+    margin-top: 2em;
+}
 
 
 

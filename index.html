@@ -6,8 +6,29 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/gumshoe.min.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/vendor/smooth-scroll.min.js"></script>
+    <script src="js/vendor/gumshoe.min.js"></script>
+    <script src="js/vendor/pegasus.min.js"></script>
+
+    <script type="text/javascript">
+        var polyfills = {
+            "promises": "js/polyfill/promise.min.js",
+            "classlist": "js/polyfill/classList.min.js",
+            "queryselector": "js/polyfill/CSS_selector_engine.js",
+            "localstorage": "js/polyfill/localstorage.js"
+        }
+        Object.keys(polyfills)
+            .forEach(function(key){
+                if(!Modernizr[key]) {
+                    var js = document.createElement("script")
+                    js.setAttribute("type","text/javascript")
+                    js.setAttribute("src", polyfills[key])
+                }
+            })
+    </script>
+    
+    <script src="js/flickr.js"></script>
 </head>
 <body>
 
@@ -74,8 +95,18 @@
 </section>
 
 <section id="photos">
-    <a data-flickr-embed="true" data-context="true"  href="https://www.flickr.com/photos/subterrarium/15455346367" title="Konzert in der Schenke"><img src="https://farm4.staticflickr.com/3935/15455346367_173ba1a5ed_c.jpg" width="800" height="534" alt="Konzert in der Schenke"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-    
+    <div>
+        <a href="#photos" class="photo-nav prev" data-nav="-1">&lt;</a>
+            <img src="" id="photo" />
+        <a href="#photos" class="photo-nav next" data-nav="1">&gt;</a>
+    </div>
+
+    <div>
+        <span id="photo-title"></span>
+        <a href="https://www.flickr.com/photos/subterrarium/collections/72157626484820818/" id="photo-flickr" target="_blank">
+            &rarr; auf flickr
+        </a>
+    </a>
 </section>
 
 <footer>
@@ -84,9 +115,15 @@
     <span class="copyleft">&copy;</span> subchor 1996-2016,
     <a href="impressum.html">Impressum</a>,
     <a href="archiv.html">Bisherige Auftritte</a>
+    <div class="legal">
+        This product uses the Flickr API but is not endorsed or certified by Flickr.
+    </div>
 </footer>
 
 <script type="text/javascript">
+    /*****
+     * Randomize Slogan + Background
+    ****/
     function rand(max) {
         return Math.round(Math.random()*max)
     }
@@ -104,6 +141,9 @@
     document.getElementById("landing")
         .classList.add("bg"+rand(1))
 
+    /*****
+     * Scrolling / Navbar highlight
+    ****/
     smoothScroll.init()
     gumshoe.init()
 </script>

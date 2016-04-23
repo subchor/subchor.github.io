@@ -36,11 +36,13 @@ section {
     position: fixed;
     height: 48px;
     width: 100%;
-    padding-left: 25px;
+    padding-left: 50px;
     z-index: 1;
+    overflow: hidden;
 }
 #top-nav ul, #top-nav li {
     display: inline;
+    padding: 0;
 }
 #top-nav a {
     color: #ddd;
@@ -178,6 +180,7 @@ section {
     vertical-align: top;
     text-decoration: none;
     color: #aaa;
+    outline:none;
 }
 .photo-nav:hover {
     color: #fff;

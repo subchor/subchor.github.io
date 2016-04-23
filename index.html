@@ -116,7 +116,9 @@
     <a href="impressum.html">Impressum</a>,
     <a href="archiv.html">Bisherige Auftritte</a>
     <div class="legal">
-        This product uses the Flickr API but is not endorsed or certified by Flickr.
+        <p>This product uses the Flickr API but is not endorsed or certified by Flickr.
+        </p>
+        <p>And everybody was like: <a href="#" id="o7">o7 o7 o7</a></p>
     </div>
 </footer>
 
@@ -146,6 +148,15 @@
     ****/
     smoothScroll.init()
     gumshoe.init()
+
+    /*****
+     * lol
+     *****/
+    document.getElementById("o7").onclick = function(ev){
+        ev.preventDefault()
+        this.innerHTML = "<img src='img/thc.gif' height='147' width='207' />"
+        window.scrollTo(0, 9999)
+    }
 </script>
 
 </body>

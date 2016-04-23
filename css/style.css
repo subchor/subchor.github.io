@@ -172,7 +172,7 @@ section {
 }
 #photos img {
     max-height: 80vh;
-    max-width: 90vw;
+    max-width: 80vw;
 }
 .photo-nav {
     line-height: 80vh;

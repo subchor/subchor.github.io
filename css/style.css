@@ -133,7 +133,14 @@ section {
     height: 200px;
 }
 
+/*********
+ * LIVE  *
+ *********/
+
+#live {
+    background: #DAFF67;
 }
+
 
 /*********
  * ABOUT *
@@ -145,11 +152,20 @@ section {
 
 
 /*********
- * Contact *
+ * JOIN  *
  *********/
 
-#contact {
+#join {
     background: #91F8B6;
+}
+
+
+/*********
+ * BOOK  *
+ *********/
+
+#book {
+    background: #CDFBFF;
 }
 
 

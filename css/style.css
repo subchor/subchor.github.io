@@ -51,10 +51,20 @@ section {
     padding: 14px 25px;
     position: relative;
     top: 10px;
-    transition: background 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 #top-nav a.active {
     background: rgba(255,255,255,0.4);
+}
+#top-nav a.active[href="#landing"] {
+    visibility: hidden;
+    opacity: 0;
+}
+#top-nav img {
+    height: 36px;
+    margin-top: -20px;
+    top: 13px;
+    position: relative;
 }
 
 /*********

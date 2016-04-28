@@ -122,22 +122,16 @@ section {
     background: rgba(255,255,255,0.7);
     animation: waitfadein 5s; // give fb widget 4s to load before fading in
 }
-#attenzione {
+#horse {
     position: absolute;
     top: 10vh;
     right: 50px;
-    background: #FEEF00;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    transition: all 0.3s ease-out;
+    background-image: url(../img/pferd.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
 }
-#attenzione:hover {
-    transform: rotate(365deg);
-}
-#attenzione div {
-    padding-top: 30px;
-    font-size: 16px;
 
 }
 

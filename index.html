@@ -54,6 +54,7 @@
 <section id="landing">
     <img src="img/logo-simplified.svg" id="logo">
     <h2 id="slogan">We sing, we lubricate</h2>
+    <div id="slogan-source">David Hill</div>
     <div class="fb-page" data-href="https://www.facebook.com/subchor/" data-tabs="timeline" data-width="250" data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
         <div class="fb-xfbml-parse-ignore">
             <blockquote cite="https://www.facebook.com/subchor/">Aktuelle Infos auf unserer <a href="https://www.facebook.com/subchor/">Facebook-Seite</a></blockquote>
@@ -131,14 +132,19 @@
     }
 
     var slogans = [
-        "We sing, we lubricate",
-        "…, jenem interessanten Hobby-Chor",
-        "Ist das ein Kinderchor im Hintergrund?",
-        "a.k.a. Räudiger Arbeiterinnenchor 3000 (Jackson)"
+        {text: "We sing, we lubricate", source: "David Hill"},
+        {text: "…, jenem interessanten Hobby-Chor, …", source: "Eva Umbauer"},
+        {text: "Ist das ein Kinderchor im Hintergrund?", source: "Fritz Ostermeier"},
+        {text: "a.k.a. Räudiger Arbeiterinnenchor 3000 (Jackson)", source: "Alex Haspel"},
+        {text: "… ein ergreifendes Nahtoderlebnis", source: "Helmut Ploebst, der Standard"}
     ]
 
+    var sloganNb = rand(slogans.length-1)
+    var slogan = slogans[sloganNb]
     document.getElementById("slogan")
-        .innerText = slogans[rand(slogans.length-1)]
+        .innerText = slogan.text
+    document.getElementById("slogan-source")
+        .innerText = slogan.source
 
     document.getElementById("landing")
         .classList.add("bg"+rand(1))

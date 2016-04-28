@@ -87,7 +87,10 @@ section {
     padding: 10px;
     color: #fff;
     border-bottom: 2px solid #fff;
-
+    margin-bottom: 10px;
+}
+#slogan-source {
+    color: #fff;
 }
 #slogan:before {
     content: '“';

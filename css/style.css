@@ -132,6 +132,23 @@ section {
     width: 200px;
     height: 200px;
 }
+#tail {
+    position: relative;
+    background-image: url(../img/schweif.png);
+    background-size: contain;
+    left: -107px;
+    height: 93px;
+    width: 131px;
+    background-repeat: no-repeat;
+    opacity: .6;
+    transition: all .5s ease-out;
+}
+#horse:hover #tail {
+    opacity: 1;
+    transform: rotate(10deg);
+    transform-origin: 100% 55%;
+}
+
 
 /*********
  * LIVE  *

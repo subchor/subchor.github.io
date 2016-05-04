@@ -67,6 +67,13 @@ section {
     position: relative;
 }
 
+@media (max-width: 960px) {
+    #top-nav {
+        visibility: hidden;
+    }
+}
+
+
 /*********
  * Landing
  *********/
@@ -76,6 +83,7 @@ section {
     background-repeat:  no-repeat;
     background-size: cover;
     text-align: center;
+    position: relative;
 }
 #landing.bg0 {
     background-image: url(../img/riesenrad01.jpg);
@@ -84,7 +92,7 @@ section {
     background-image: url(../img/wohltemperiert.jpg);
 }
 #logo {
-    padding-top: 50vh;
+    padding-top: 40vh;
     width: 128px;
     display: block;
     margin-right: auto;
@@ -98,9 +106,10 @@ section {
     color: #fff;
     border-bottom: 2px solid #fff;
     margin-bottom: 10px;
+    max-width: calc(100% - 620px);
 }
 #slogan-source {
-    color: #fff;
+    color: #ccc;
 }
 #slogan:before {
     content: '“';
@@ -112,8 +121,10 @@ section {
 .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
     position: absolute;
     left: 50px;
-    top: 25vh;
-    height: 50vh;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 /* fallback when Facebook widget is blocked*/
 .fb-xfbml-parse-ignore {
@@ -125,7 +136,7 @@ section {
 #horse {
     position: absolute;
     top: 10vh;
-    right: 50px;
+    right: 40px;
     background-image: url(../img/pferd.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -147,6 +158,35 @@ section {
     opacity: 1;
     transform: rotate(10deg);
     transform-origin: 100% 55%;
+}
+
+@media (max-height: 600px) {
+    #logo {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 960px) {
+    #logo {
+        padding-top: 50px;
+    }
+    #slogan {
+        max-width: 90%;
+    }
+    .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 20px;
+        -ms-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+    #horse {
+        transform: scale(0.5);
+        top: 0;
+        right: 0;
+    }
 }
 
 
@@ -251,14 +291,6 @@ footer .legal {
     font-size: 0.5em;
     color: #444;
     margin-top: 2em;
-}
-
-
-
-@media (max-width: 600px) {
-  #top-nav {
-    visibility: hidden;
-  }
 }
 
 

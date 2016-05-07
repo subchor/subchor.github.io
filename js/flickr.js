@@ -1,3 +1,4 @@
+(function(){
 /*****
  * Embed Photos from Flickr
 ****/
@@ -5,9 +6,12 @@ var searchByTagUrl = "https://api.flickr.com/services/rest/?method=flickr.photos
 var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=088e79ad567fb57b47e31915b2d0c8f9&format=json&nojsoncallback=1&&photo_id="
 var flickrUrl = "https://www.flickr.com/photos/subterrarium/"
 
-pegasus(searchByTagUrl).then(function(res){
+fetch(searchByTagUrl)
+.then(function(res){
+    return res.json()
+}).then(function(json){
     var flickrStream = new FlickrStream({
-        photos: res.photos.photo,
+        photos: json.photos.photo,
         imgEl: document.getElementById("photo"),
         titleEl: document.getElementById("photo-title"),
         flickrLinkEl: document.getElementById("photo-flickr"),
@@ -31,16 +35,24 @@ var FlickrPhoto = function(raw, apiKey) {
 }
 FlickrPhoto.prototype.getSizes = function(){
     if(!this._sizesPromise) {
-        this._sizesPromise = pegasus(photoSizesUrl + this.id)
+        var that = this
+        this._sizesPromise = fetch(photoSizesUrl + this.id)
+            .then(function(res){
+                return res.json()
+            })
+            .then(function(json){
+                that._sizes = json.sizes.size
+            })
     }
     return this._sizesPromise
 }
 FlickrPhoto.prototype.getUrlForSize = function(size) {
     var sizes = this.getSizes()
+    var that = this
     return new Promise(function(resolve, reject){
         sizes.then(function(res){
             var resolved = false
-            res.sizes.size.forEach(function(sizeObj){
+            that._sizes.forEach(function(sizeObj){
                 if(sizeObj.label === size){
                     resolve(sizeObj.source)
                     resolved = true
@@ -51,7 +63,6 @@ FlickrPhoto.prototype.getUrlForSize = function(size) {
             }
         })
     })
-    return promise
 }
 
 
@@ -107,3 +118,4 @@ FlickrStream.prototype.navigate = function(incr) {
     this.showPhoto()
     this.preload()
 }
+})()

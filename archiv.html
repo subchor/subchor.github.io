@@ -1,1 +1,39 @@
-Dies + Jenes
+<!DOCTYPE html>
+<html>
+<head>
+    <title>subchor ↯  Archiv</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/vendor/doT.min.js"></script>
+
+    <script type="text/javascript">
+        var polyfills = {
+            "promises": "js/polyfill/promise.min.js",
+            "queryselector": "js/polyfill/CSS_selector_engine.js",
+            "fetch": "js/polyfill/fetch.min.js",
+        }
+        Object.keys(polyfills)
+            .forEach(function(key){
+                if(!Modernizr[key]) {
+                    var js = document.createElement("script")
+                    js.setAttribute("type","text/javascript")
+                    js.setAttribute("src", polyfills[key])
+                }
+            })
+    </script>
+    
+    <script src="js/shows.js"></script>
+</head>
+<body>
+    <div class="text">
+        <div id="live-upcomming"></div>
+
+
+        <h3>Zuletzt:</h3>
+        <ul id="live-past"></ul>
+    </div>
+</body>

@@ -10,14 +10,15 @@
     <script src="js/modernizr-custom.js"></script>
     <script src="js/vendor/smooth-scroll.min.js"></script>
     <script src="js/vendor/gumshoe.min.js"></script>
-    <script src="js/vendor/pegasus.min.js"></script>
+    <script src="js/vendor/doT.min.js"></script>
 
     <script type="text/javascript">
         var polyfills = {
             "promises": "js/polyfill/promise.min.js",
             "classlist": "js/polyfill/classList.min.js",
             "queryselector": "js/polyfill/CSS_selector_engine.js",
-            "localstorage": "js/polyfill/localstorage.js"
+            "localstorage": "js/polyfill/localstorage.js",
+            "fetch": "js/polyfill/fetch.min.js",
         }
         Object.keys(polyfills)
             .forEach(function(key){
@@ -30,6 +31,7 @@
     </script>
     
     <script src="js/flickr.js"></script>
+    <script src="js/shows.js"></script>
 </head>
 <body>
 
@@ -79,14 +81,15 @@
 
 <section id="live">
     <div class="text">
-        <h2>Nächster Auftritt:</h2>
-        <p>28. 5. 2016, subchor bei der Sonnenland-Eröffnung</p>
+        <div id="live-upcomming">
+            Derzeit sind keine Auftritte geplant. 
+            Wenn du eine Idee hast, wo und wie das geändert werden kann -
+            <a href="#book">immer her damit!</a>
+        </div>
 
-        <h3>Zuvor</h3>
-        <ul>
-            <li>x.2. 2016, subchor hilft dem Social Muscle Club, brut</li>
-            <li>x.y. 2015, Brunch mit Chor, moe</li>
-        </ul>
+
+        <h3>Zuletzt:</h3>
+        <ul id="live-past" data-max="5"></ul>
         Die komplette Historie gibt es im <a href="archiv.html">Archiv</a>
     </div>
 </section>
@@ -145,6 +148,7 @@
 </footer>
 
 <script type="text/javascript">
+(function(){
     /*****
      * Randomize Slogan + Background
     ****/
@@ -184,6 +188,7 @@
         this.innerHTML = "<img src='img/thc.gif' height='147' width='207' />"
         window.scrollTo(0, 9999)
     }
+})()
 </script>
 
 </body>

@@ -1,21 +1,24 @@
 (function(){
     // load doT templates
-    var fetchTemplate = function(name){
-        if(!templates[name]) {
-            templates[name] = new Promise(function(resolve, reject){
-                fetch("js/templates/"+name+".html")
-                .then(function(response){
-                    return response.text()
-                })
-                .then(function(tmpl){
-                    resolve(doT.template(tmpl))
-                })
+    var templateHolder  = new Promise(function(resolve, reject){
+        fetch("js/templates/templates.html")
+        .then(function(response){
+            return response.text()
+        })
+        .then(function(tmpl){
+            var div = document.createElement("div")
+            div.innerHTML = tmpl
+            resolve(div)
+        })
+    })
+    var getTemplate = function(name){
+        return new Promise(function(resolve, reject){
+            templateHolder.then(function(div){
+                var tmplDOM = div.querySelector("#"+name)
+                resolve(doT.template(tmplDOM.innerHTML))
             })
-        }
-        return templates[name]
+        })
     }
-    var templates = {}
-    fetchTemplate("showlist")
 
     // load JSON with show data
     fetch("shows.json")
@@ -49,7 +52,7 @@
         
         // render upcomming shows
         if(upcommingShows.length) {
-            fetchTemplate("upcomming")
+            getTemplate("upcomming")
             .then(function(tmpl){
                 var upcommingEl = document.getElementById("live-upcomming")
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
@@ -58,7 +61,8 @@
         }
 
         // render past shows
-        templates.showlist.then(function(tmpl){
+        getTemplate("showlist")
+        .then(function(tmpl){
             pastEl.innerHTML = tmpl({shows: pastShows})
         })
     })

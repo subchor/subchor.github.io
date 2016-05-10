@@ -58,6 +58,13 @@
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
             })
             
+
+            getTemplate("next-gig")
+            .then(function(tmpl){
+                var nextGig = upcommingShows[upcommingShows.length - 1]
+                var nextGigEl = document.getElementById("next-gig")
+                nextGigEl.innerHTML = tmpl({show: nextGig})
+            })
         }
 
         // render past shows

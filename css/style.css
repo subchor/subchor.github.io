@@ -43,7 +43,7 @@ section {
     height: 48px;
     width: 100%;
     padding-left: 50px;
-    z-index: 1;
+    z-index: 100;
     overflow: hidden;
 }
 #top-nav ul, #top-nav li {
@@ -150,6 +150,14 @@ section {
 }
 #landing.bg1 {
     background-image: url(../img/wohltemperiert.jpg);
+}
+#next-gig {
+    background: rgba(0,0,0, 0.2);
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
 }
 #logo {
     padding-top: 40vh;
@@ -285,6 +293,17 @@ section {
     background: #CDFBFF;
 }
 
+
+@media (min-width: 960px) {
+    #join, #book {
+        width: 50%;
+        display: inline-block;
+        float: left;
+    }
+    #video {
+        clear: left;
+    }
+}
 
 
 /*********

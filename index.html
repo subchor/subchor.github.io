@@ -60,6 +60,7 @@
 </nav>
 
 <section id="landing">
+    <a href="#live" id="next-gig"></a>
     <img src="img/logo-simplified.svg" id="logo">
     <h2 id="slogan">We sing, we lubricate</h2>
     <div id="slogan-source">David Hill</div>
@@ -98,14 +99,16 @@
 
 <section id="join">
     <div class="text">
+        <h2>Mitmachen:</h2>
         <p>Geprobt wird zumeist einmal pro Woche. Der Einstieg ist jederzeit möglich, vorbehaltlich auftrittsbedingter Sondersituationen.
-        Für nähere Informationen bitte Mail an: chor[at]subterrarium.at
+        Für nähere Informationen bitte Mail an: <span class="chormail"></span>
         </p>
     </div>
 </section>
 
 <section id="book">
     <div class="text">
+        <h2>Buchen:</h2>
         <p>Der Chor tritt überall auf, wo folgende Bedingungen erfüllt sind und die ProtagonistInnen gerne singen:</p>
         <ul>
             <li>Bühnenplatz für ca. 30 Leute</li>
@@ -113,6 +116,7 @@
             <li>keine geschlossenen Veranstaltungen</li>
             <li>rechtzeitige Anfrage, ca. einen Monat vorher ist wünschenswert.</li>
         </ul>
+        <p>Einfach e-mail an <span class="chormail"></span>
     </div>
 </section>
 
@@ -139,9 +143,9 @@
     
 
     <span class="copyleft">&copy;</span> subchor 1996-2016,
-    <a href="impressum.html">Impressum</a>,
-    <a href="archiv.html">Bisherige Auftritte</a>,
-    <a href="praktikum.html">Karriere</a>
+    <a href="impressum.txt">Impressum</a>,
+    <a href="archiv.html">Bisherige Auftritte</a>
+    <!--, <a href="praktikum.html">Karriere</a> -->
     <div class="legal">
         <p>This product uses the Flickr API but is not endorsed or certified by Flickr.
         </p>
@@ -175,6 +179,28 @@
 
     document.getElementById("landing")
         .classList.add("bg"+rand(1))
+
+    var navLinks = document.querySelectorAll("#top-nav a")
+    for(var i = 0; i < navLinks.length; i++) {
+        var link = navLinks[i]
+        link.onclick = function(){
+            var nav = document.querySelector("#top-nav")
+            nav.style.display = "none"
+            window.setTimeout(function(){
+                nav.style.display = "block"
+            }, 1)
+        }
+    }
+
+    /*****
+     * mail links
+    ****/
+    var mail = document.querySelectorAll(".chormail")
+    for(var i = 0; i < mail.length; i++) {
+        var m = mail[i]
+        var addr = atob("aGFsbG9Ac3ViY2hvci5hdA==")
+        m.innerHTML = "<a href='mailto:" + addr + "'>" + addr + "</a>"
+    }
 
     /*****
      * Scrolling / Navbar highlight

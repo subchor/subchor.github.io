@@ -26,6 +26,12 @@
     "description": 0
   },
   {
+    "date": "2015-11-20",
+    "title": "Atelierball",
+    "location": "Einbaumöbel",
+    "description": 0
+  },
+  {
     "date": "2015-09-12",
     "title": "Europa Festival",
     "location": "Arena",
@@ -45,7 +51,7 @@
   },
   {
     "date": "2015-05-01",
-    "title": "Openstage beim FridayExit + Curious Circus Collective",
+    "title": "FridayExit Proudly Connects: Curious Circus Collective | Subchor",
     "location": "Friday Exit",
     "description": 0
   },
@@ -110,6 +116,12 @@
     "description": 0
   },
   {
+    "date": "2014-05-25",
+    "title": "Make the Snake",
+    "location": "Transporterbar",
+    "description": "Musikalischer Spaziergang durch den Sandleitnerhof gemeinsam mit der MAK, SOHO Ottakring"
+  },
+  {
     "date": "2014-03-08",
     "title": "Konzert",
     "location": "Transporterbar",
@@ -141,8 +153,8 @@
   },
   {
     "date": "2013-09-07",
-    "title": 0,
-    "location": 0,
+    "title": "Konzert, vermutlich",
+    "location": "nicht erinnerlich",
     "description": 0
   },
   {
@@ -182,9 +194,15 @@
     "description": 0
   },
   {
-    "date": "2013-02-21",
+    "date": "2013-02-22",
     "title": "Chorgeburtstag",
     "location": "aparat",
+    "description": 0
+  },
+  {
+    "date": "2013-02-21",
+    "title": "Intro bei Strahler 80 präsentiert: Ghostbusters",
+    "location": "Gartenbaukino",
     "description": 0
   },
   {
@@ -201,8 +219,8 @@
   },
   {
     "date": "2012-07-03",
-    "title": 0,
-    "location": 0,
+    "title": "Konzert, vermutlich",
+    "location": "nicht erinnerlich",
     "description": 0
   },
   {
@@ -296,9 +314,15 @@
     "description": 0
   },
   {
+    "date": "2011-01-22",
+    "title": "Subchor Yubilaeioum",
+    "location": "Subterrarium",
+    "description": "Der Chor feiert seinen ersten Geburtstag."
+  },
+  {
     "date": "2010-11-05",
-    "title": "Konzert (kostümiert)",
-    "location": "Einbaumöbel",
+    "title": "Ausstellung 'Flucht in die Sachwerte'",
+    "location": "Loftrohbau Jägerstraße",
     "description": 0
   },
   {
@@ -315,8 +339,8 @@
   },
   {
     "date": "2010-05-28",
-    "title": "Soho Ottakring mit der MAK",
-    "location": "Hippviertel",
+    "title": "'Make the Snake' mit der MAK",
+    "location": "Hippviertel, Soho Ottakring",
     "description": 0
   },
   {

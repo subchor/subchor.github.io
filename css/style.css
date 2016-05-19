@@ -5,7 +5,7 @@
 body {
     font-size: 24px;
     font-family: 'Source Sans Pro', sans-serif;
-	overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 section {
@@ -342,32 +342,32 @@ section {
     display: inline-block;
     vertical-align: top;
     text-decoration: none;
-    color: #aaa;
+    color: #b4a7a7;
     outline: none;
-	width: 50%;
-	font-size: 4em;
-	transition: all .2s ease-out;
-	transform: scaleX(0.8);
+    width: 50%;
+    font-size: 4em;
+    transition: all .2s ease-out;
+    transform: scaleX(0.8);
 }
 .photo-nav:hover {
     color: #fff;
-	transform: scaleX(1) rotate(-10deg);
+    transform: scaleX(1) rotate(-10deg);
 }
 .photo-nav:active {
-	transform: scaleX(1.4) rotate(-20deg);
+    transform: scaleX(1.4) rotate(-20deg);
 }
 
 .photo-nav.prev {
     position: absolute;
-	left: 0;
-	text-align: left;
-	padding-left: 5vw;
+    left: 0;
+    text-align: left;
+    padding-left: 5vw;
 }
 .photo-nav.next {
     position: absolute;
-	right: 0;
-	text-align: right;
-	padding-right: 5vw;
+    right: 0;
+    text-align: right;
+    padding-right: 5vw;
 }
 
 

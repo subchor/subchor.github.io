@@ -28,12 +28,12 @@
     .then(function(shows){
 
         // get start of tomorrow - without using Moment.js
-        var tomorrow = new Date()
-        tomorrow.setHours(0)
-        tomorrow.setMinutes(0)
-        tomorrow.setSeconds(0)
-        tomorrow.setMilliseconds(0)
-        tomorrow.setDate(tomorrow.getDate() + 1)
+        var today = new Date()
+        today.setHours(0)
+        today.setMinutes(0)
+        today.setSeconds(0)
+        today.setMilliseconds(0)
+        //tomorrow.setDate(tomorrow.getDate() + 1)
 
         // separate shows into upcomming and past
         var upcommingShows = []
@@ -43,7 +43,7 @@
         shows.forEach(function(show){
             show.date = new Date(show.date)
             show.dateFriendly = formatDate(show.date)
-            if(show.date > tomorrow) {
+            if(show.date >= today) {
                 upcommingShows.push(show)
             } else if (!pastMax || pastShows.length <= 5){
                 pastShows.push(show)

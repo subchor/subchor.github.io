@@ -188,21 +188,7 @@ section {
     content: '”';
 }
 
-.fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-/* fallback when Facebook widget is blocked*/
-.fb-xfbml-parse-ignore {
-    width: 250px;
-    padding: 100px 10px;
-    background: rgba(255,255,255,0.7);
-    animation: waitfadein 5s; // give fb widget 4s to load before fading in
-}
+
 #horse {
     position: absolute;
     top: 10vh;
@@ -243,15 +229,6 @@ section {
     #slogan {
         max-width: 90%;
     }
-    .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
-        position: relative;
-        left: auto;
-        top: auto;
-        margin: 20px;
-        -ms-transform: none;
-        -webkit-transform: none;
-        transform: none;
-    }
     #horse {
         transform: scale(0.5);
         top: 0;
@@ -268,6 +245,33 @@ section {
     background: #DAFF67;
 }
 
+.fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
+    margin: 20px 50px;
+}
+/* fallback when Facebook widget is blocked*/
+.fb-xfbml-parse-ignore {
+    width: 250px;
+    padding: 10px;
+    background: rgba(255,255,255,0.7);
+    animation: waitfadein 5s; // give fb widget 4s to load before fading in
+}
+
+/* place FB widget on right side next to text on large devices */
+@media (min-width: 800px) {
+    #live {
+        position: relative;
+        overflow-y: hidden;
+    }
+    #live .text {
+        width: calc(100% - 280px);
+    }
+    .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
+        position: absolute;
+        right: 50px;
+        top: 70px;
+        margin: 0;
+    }
+}
 
 /*********
  * ABOUT *

@@ -401,6 +401,11 @@ section {
     text-align: right;
     padding-right: 5vw;
 }
+a#photo-flickr {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.7em; 
+}
 
 
 /*********

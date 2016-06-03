@@ -21,14 +21,6 @@ section {
     100%   { opacity: 1; }
 }
 
-.text {
-    padding: 0 50px;
-}
-.copyleft {
-    display: inline-block;
-    transform: scaleX(-1);
-}
-
 @media (max-width: 960px) {
     body {
         font-size: 16px;
@@ -189,7 +181,7 @@ section {
 }
 #slogan, #slogan-source {
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 
 #horse {
@@ -202,6 +194,7 @@ section {
     background-repeat: no-repeat;
     width: 200px;
     height: 200px;
+    z-index: 1;
 }
 #horse #tail {
     position: relative;
@@ -236,6 +229,49 @@ section {
 }
 
 
+/************************
+ * TEXT BLOCKS          *
+ * wrapper around about,*
+ * live, join, and book *
+ ************************/
+
+#text-blocks {
+    overflow: hidden;
+    position: relative;
+}
+#text-backdrop {
+    position: absolute;
+    display: block;
+    height: 400vh;
+    left: 33%;
+    top: 5vh;
+    opacity: 0.33;
+    z-index: 1;
+}
+
+.text {
+    padding: 0 50px;
+    position: relative;
+    z-index: 5;
+}
+
+@media (max-width: 600px) {
+    #text-backdrop {
+        height: 400vh;
+        left: -10%;
+        top: -5vh;
+    }
+}
+
+
+/*********
+ * ABOUT *
+ *********/
+
+#about {
+    background: #EF8696;
+}
+
 /*********
  * LIVE  *
  *********/
@@ -246,6 +282,8 @@ section {
 
 .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
     margin: 20px 50px;
+    position: relative;
+    z-index: 5;
 }
 /* fallback when Facebook widget is blocked*/
 .fb-xfbml-parse-ignore {
@@ -271,15 +309,6 @@ section {
         margin: 0;
     }
 }
-
-/*********
- * ABOUT *
- *********/
-
-#about {
-    background: #EF8696;
-}
-
 
 /*********
  * JOIN  *
@@ -383,10 +412,12 @@ footer {
 }
 
 footer .legal {
-    font-size: 0.5em;
+    font-size: 0.7em;
     color: #444;
     margin-top: 2em;
 }
 
-
-
+footer .copyleft {
+    display: inline-block;
+    transform: scaleX(-1);
+}

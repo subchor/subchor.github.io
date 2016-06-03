@@ -3,7 +3,7 @@
 }
 
 body {
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
     overflow-x: hidden;
 }
@@ -158,11 +158,11 @@ section {
     padding: 10px;
     color: #fff;
     text-decoration: none;
-    z-index: 1;
     position: relative;
+    top: 20px;
 }
 #logo {
-    padding-top: 40vh;
+    padding-top: 25vh;
     width: 128px;
     display: block;
     margin-right: auto;
@@ -176,7 +176,7 @@ section {
     color: #fff;
     border-bottom: 2px solid #fff;
     margin-bottom: 10px;
-    max-width: calc(100% - 620px);
+    max-width: 70%;
 }
 #slogan-source {
     color: #ccc;
@@ -187,19 +187,23 @@ section {
 #slogan:after {
     content: '”';
 }
-
+#slogan, #slogan-source {
+    position: relative;
+    z-index: 1;
+}
 
 #horse {
     position: absolute;
-    top: 10vh;
-    right: 40px;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
     background-image: url(../img/pferd.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 200px;
     height: 200px;
 }
-#tail {
+#horse #tail {
     position: relative;
     background-image: url(../img/schweif.png);
     background-size: contain;
@@ -228,11 +232,6 @@ section {
     }
     #slogan {
         max-width: 90%;
-    }
-    #horse {
-        transform: scale(0.5);
-        top: 0;
-        right: 0;
     }
 }
 

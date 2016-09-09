@@ -188,7 +188,7 @@
         .innerText = slogan.source
 
     document.getElementById("landing")
-        .classList.add("bg"+rand(26))
+        .classList.add("bg"+rand(26))  // <--- number of background images available, has to match CSS classes
 
     var navLinks = document.querySelectorAll("#top-nav a")
     for(var i = 0; i < navLinks.length; i++) {

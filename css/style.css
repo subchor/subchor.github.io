@@ -230,6 +230,9 @@ section {
     position: relative;
     top: 20px;
 }
+#next-gig:empty {
+    visibility: hidden;
+}
 #logo {
     padding-top: 25vh;
     width: 128px;

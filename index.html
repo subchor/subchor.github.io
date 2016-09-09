@@ -165,7 +165,7 @@
      * Randomize Slogan + Background
     ****/
     function rand(max) {
-        return Math.round(Math.random()*max)
+        return Math.floor(Math.random()*(max+1))
     }
 
     var slogans = [
@@ -186,7 +186,7 @@
         .innerText = slogan.source
 
     document.getElementById("landing")
-        .classList.add("bg"+rand(1))
+        .classList.add("bg"+rand(25))
 
     var navLinks = document.querySelectorAll("#top-nav a")
     for(var i = 0; i < navLinks.length; i++) {

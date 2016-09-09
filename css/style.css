@@ -136,15 +136,89 @@ section {
     background: #99B1BD;
     background-repeat:  no-repeat;
     background-size: cover;
+    background-position: center center;
     text-align: center;
     position: relative;
 }
 #landing.bg0 {
-    background-image: url(../img/riesenrad01.jpg);
+    background-image: url(../img/bg/004_5613653205_o.jpg);
 }
 #landing.bg1 {
-    background-image: url(../img/wohltemperiert.jpg);
+    background-image: url(../img/bg/4-jahre-subchor_14148159466_o.jpg);
 }
+#landing.bg2 {
+    background-image: url(../img/bg/DSCF1315.jpg);
+}
+#landing.bg3 {
+    background-image: url(../img/bg/flatten_choir.jpg);
+}
+#landing.bg4 {
+    background-image: url(../img/bg/gehsteigfestival_5852001557_o.jpg);
+}
+#landing.bg5 {
+    background-image: url(../img/bg/IMG_8979_c_mar.jpg);
+}
+#landing.bg6 {
+    background-image: url(../img/bg/IMG_9138_c_hasibi.jpg);
+}
+#landing.bg7{
+    background-image: url(../img/bg/IMG_9179_Panorama_c_hasibi.jpg);
+}
+#landing.bg8 {
+    background-image: url(../img/bg/konzert-in-der-schenke_15020581884_o.jpg);
+}
+#landing.bg9 {
+    background-image: url(../img/bg/subchor-1bm_8118744466_o.jpg);
+}
+#landing.bg10 {
+    background-image: url(../img/bg/subchor--hidden-cameras_8794169482_o.jpg);
+}
+#landing.bg11 {
+    background-image: url(../img/bg/subchor--hidden-cameras_8794177308_o.jpg);
+}
+#landing.bg12 {
+    background-image: url(../img/bg/umweltpdagogik_6880466831_o.jpg);
+}
+#landing.bg13 {
+    background-image: url(../img/bg/wienwirbel_1_6880477201_o.jpg);
+}
+#landing.bg14 {
+    background-image: url(../img/bg/gehsteigfestival_5852001557_o.jpg);
+}
+#landing.bg15 {
+    background-image: url(../img/bg/IMG_8979_c_mar.jpg);
+}
+#landing.bg16 {
+    background-image: url(../img/bg/IMG_9138_c_hasibi.jpg);
+}
+#landing.bg17 {
+    background-image: url(../img/bg/IMG_9179_Panorama_c_hasibi.jpg);
+}
+#landing.bg18 {
+    background-image: url(../img/bg/konzert-in-der-schenke_15020581884_o.jpg);
+}
+#landing.bg19 {
+    background-image: url(../img/bg/_MG_2031.jpg);
+}
+#landing.bg20 {
+    background-image: url(../img/bg/_MG_2180.jpg);
+}
+#landing.bg21 {
+    background-image: url(../img/bg/subchor-1bm_8118744466_o.jpg);
+}
+#landing.bg22 {
+    background-image: url(../img/bg/subchor--hidden-cameras_8794169482_o.jpg);
+}
+#landing.bg23 {
+    background-image: url(../img/bg/subchor--hidden-cameras_8794177308_o.jpg);
+}
+#landing.bg24 {
+    background-image: url(../img/bg/umweltpdagogik_6880466831_o.jpg);
+}
+#landing.bg25 {
+    background-image: url(../img/bg/wienwirbel_1_6880477201_o.jpg);
+}
+
 #next-gig {
     background: rgba(0,0,0, 0.2);
     padding: 10px;

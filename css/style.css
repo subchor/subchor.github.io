@@ -218,6 +218,9 @@ section {
 #landing.bg25 {
     background-image: url(../img/bg/wienwirbel_1_6880477201_o.jpg);
 }
+#landing.bg26 {
+    background-image: url(../img/bg/wohltemperiert.jpg);
+}
 
 #next-gig {
     background: rgba(0,0,0, 0.2);

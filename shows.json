@@ -1,4 +1,20 @@
-[ {
+[
+    
+    
+  {
+    "date": "2016-12-16",
+    "title": "Grand Opening Vronihof",
+    "location": "Veronikagasse 24, 1160",
+    "description": "Eröffnung unserer neuen Probenheimstätte. Mit Traumsegler und rapha ramires (disco nostra)",
+    "link": "https://www.facebook.com/events/1831002763810099/"  
+  },
+  {
+    "date": "2016-12-13",
+    "title": "Weihnachtfeier Kunstraum NÖ",
+    "location": "Kunstraum NÖ",
+    "description": 0
+  },
+  {
     "date": "2016-11-11",
     "title": "TastenWahnSinn 9",
     "location": "Church of Bikes, Florianigasse 68/2",

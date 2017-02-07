@@ -402,7 +402,8 @@ section {
  * JOIN & BOOK *
  **************/
 #join, #book {
-    min-height: 50vw;
+    min-height: 50vh;
+    padding-bottom: 2rem;
 }
 #join {
     background: #91F8B6;

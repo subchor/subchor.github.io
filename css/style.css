@@ -398,19 +398,15 @@ section {
     }
 }
 
-/*********
- * JOIN  *
- *********/
-
+/***************
+ * JOIN & BOOK *
+ **************/
+#join, #book {
+    min-height: 50vw;
+}
 #join {
     background: #91F8B6;
 }
-
-
-/*********
- * BOOK  *
- *********/
-
 #book {
     background: #CDFBFF;
 }
@@ -421,6 +417,7 @@ section {
         width: 50%;
         display: inline-block;
         float: left;
+        min-height: 100vw;
     }
     #video {
         clear: left;

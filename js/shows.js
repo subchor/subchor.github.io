@@ -52,6 +52,7 @@
         
         // render upcomming shows
         if(upcommingShows.length) {
+            upcommingShows.reverse()
             getTemplate("upcomming")
             .then(function(tmpl){
                 var upcommingEl = document.getElementById("live-upcomming")
@@ -61,9 +62,8 @@
 
             getTemplate("next-gig")
             .then(function(tmpl){
-                var nextGig = upcommingShows[upcommingShows.length - 1]
                 var nextGigEl = document.getElementById("next-gig")
-                nextGigEl.innerHTML = tmpl({show: nextGig})
+                nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
             })
         }
 

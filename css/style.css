@@ -416,9 +416,8 @@ section {
 @media (min-width: 960px) {
     #join, #book {
         width: 50%;
-        display: inline-block;
         float: left;
-        min-height: 100vw;
+        min-height: 100vh;
     }
     #video {
         clear: left;
@@ -460,7 +459,7 @@ section {
     display: inline-block;
     vertical-align: top;
     text-decoration: none;
-    color: #b4a7a7;
+    color: #e5d3d3;
     outline: none;
     width: 50%;
     font-size: 4em;
@@ -487,10 +486,13 @@ section {
     text-align: right;
     padding-right: 5vw;
 }
+#photo-title, #photo-flickr {
+    color: #e5d3d3;
+}
 a#photo-flickr {
     display: block;
     margin-top: 10px;
-    font-size: 0.7em; 
+    font-size: 0.7em;
 }
 
 

@@ -19,7 +19,6 @@
             })
         })
     }
-
     // load JSON with show data
     fetch("shows.json")
     .then(function(response){
@@ -49,7 +48,7 @@
                 pastShows.push(show)
             }
         })
-        
+
         // render upcomming shows
         if(upcommingShows.length) {
             upcommingShows.reverse()
@@ -58,7 +57,7 @@
                 var upcommingEl = document.getElementById("live-upcomming")
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
             })
-            
+
 
             getTemplate("next-gig")
             .then(function(tmpl){

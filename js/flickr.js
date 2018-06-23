@@ -22,14 +22,14 @@ fetch(searchByTagUrl)
     for(var i = 0; i < navs.length; i++){
         navs[i].onclick = function(ev){
             ev.preventDefault()
-            flickrStream.navigate(this.dataset.nav)
+            flickrStream.navigate(this.dataset.nav, true)
         }
     }
 })
 
 
 // Wrapper for Flickr Photo
-var FlickrPhoto = function(raw, apiKey) {
+var FlickrPhoto = function(raw) {
     this.id = raw.id
     this.title = raw.title
 }
@@ -74,7 +74,7 @@ var FlickrStream = function(options) {
     })
     this.nb = parseInt(localStorage.getItem("subchor.flickrNb")) || 0
 
-    this.navigate(0)
+    this.navigate(0, false)
 }
 FlickrStream.prototype._getNb = function(incr){
     nb = this.nb + incr
@@ -104,7 +104,7 @@ FlickrStream.prototype.preload = function(){
                 var img = document.createElement('img')
                 img.src = url
             })
-            
+
     }
     preloadImg(-1)
     preloadImg(1)
@@ -113,9 +113,11 @@ FlickrStream.prototype.setNb = function(nb) {
     this.nb = nb
     localStorage.setItem("subchor.flickrNb", nb)
 }
-FlickrStream.prototype.navigate = function(incr) {
+FlickrStream.prototype.navigate = function(incr, preload) {
     this.setNb(this._getNb(parseInt(incr)))
     this.showPhoto()
-    this.preload()
+    if(preload) {
+        this.preload()
+    }
 }
 })()

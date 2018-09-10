@@ -57,14 +57,14 @@ section {
     background: rgba(255,255,255,0.4);
 }
 #top-nav a.active[href="#landing"] img {
-    visibility: hidden;
-    opacity: 0;
+    top: -50px;
 }
 #top-nav a[href="#landing"] img {
     height: 36px;
     margin-top: -20px;
     top: 11px;
     position: relative;
+    transition: top 0.3s ease-in;
 }
 #top-nav a[href="#landing"] span {
     display: none;

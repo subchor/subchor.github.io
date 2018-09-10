@@ -1,24 +1,21 @@
 (function(){
     // load doT templates
-    var templateHolder  = new Promise(function(resolve, reject){
-        fetch("js/templates/templates.html")
+    var templateHolder = fetch("js/templates/templates.html")
         .then(function(response){
             return response.text()
         })
         .then(function(tmpl){
             var div = document.createElement("div")
             div.innerHTML = tmpl
-            resolve(div)
+            return div
         })
-    })
     var getTemplate = function(name){
-        return new Promise(function(resolve, reject){
-            templateHolder.then(function(div){
+        return templateHolder.then(function(div){
                 var tmplDOM = div.querySelector("#"+name)
-                resolve(doT.template(tmplDOM.innerHTML))
+                return doT.template(tmplDOM.innerHTML)
             })
-        })
     }
+
     // load JSON with show data
     fetch("shows.json")
     .then(function(response){

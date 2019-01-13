@@ -122,7 +122,7 @@
                 Die komplette Historie gibt es in der <a href="archiv.html">Gigografie</a>.
             </div>
 
-            <div class="fb-page" data-href="https://www.facebook.com/subchor/" data-tabs="timeline" data-width="250" data-height="500"
+            <div id="fb-widget" class="fb-page" data-href="https://www.facebook.com/subchor/" data-tabs="timeline" data-width="250" data-height="500"
                 data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
                 <div class="fb-xfbml-parse-ignore">
                     <blockquote cite="https://www.facebook.com/subchor/">
@@ -252,8 +252,22 @@
     /*****
      * Scrolling / Navbar highlight
     ****/
-    new SmoothScroll('a[href*="#"]');
+    new SmoothScroll('a[href*="#"]')
     gumshoe.init()
+
+    /*****
+     * set height of Facebook widget
+    *****/
+    var fbWidgetEl = document.getElementById('fb-widget')
+    if(fbWidgetEl && fbWidgetEl.dataset) {
+        var liveEl = document.getElementById('live')
+        var widgetHeight = Math.max(
+            (liveEl.clientHeight - 150),
+            fbWidgetEl.dataset.height,
+        )
+        fbWidgetEl.dataset.height = widgetHeight
+    }
+
 
     /*****
      * lol

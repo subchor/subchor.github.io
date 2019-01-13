@@ -9,10 +9,7 @@
             <div class="live-show-title">{{=show.title}}</div>
         {{?}}
         <div class="live-show-date-location">
-            <date date-time="{{=show.date}}">
-                {{=show.dateFriendly}}
-                {{? show.time }}{{=show.time}}{{?}}
-            </date>,
+            {{=show.dateFriendly}}{{? show.time }} ab {{=show.time}}{{?}},
             {{=show.location}}
         </div>
         {{? show.description }}

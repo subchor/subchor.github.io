@@ -386,10 +386,16 @@ a:active {
 .live-show {
     list-style: none;
     border-left: 5px solid #91F8B6;
-    padding-left: 10px;
     margin-bottom: 20px;
+    background: rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+.live-show > * {
+    padding-left: 10px;
 }
 .live-show-flyer {
+    display: block;
+    padding: 0;
     height: 150px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -397,16 +403,18 @@ a:active {
     position: relative;
 }
 .live-show-flyer .live-show-title {
+    color: #000;
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 10px 5px 5px;
+    padding: 10px 10px 5px;
     background:rgba(217,255,103,0) 50%;
     background: linear-gradient(to bottom, rgba(217,255,103,0) 0%, rgba(217,255,103,0.8) 30%, rgba(217,255,103,1) 100%);
 }
 .live-show-title {
     font-size: 1.1em;
     font-weight: bold;
+    padding-top: 10px;
 }
 .live-show-date-location {
     font-size: 0.9em;
@@ -414,8 +422,6 @@ a:active {
 }
 .live-show-description {
     padding: 10px;
-    background: rgba(255,255,255,0.3);
-    margin: 5px 0;
 }
 
 .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {

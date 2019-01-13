@@ -2,9 +2,9 @@
 {{~it.shows :show:index }}
     <li class="live-show">
         {{? show.flyer }}
-            <div class="live-show-flyer" style="background-image: url({{=show.flyer}});">
+            <a href="{{=show.flyer}}" target="_blank" rel="noopener" class="live-show-flyer" style="background-image: url({{=show.flyer}});">
                 <div class="live-show-title">{{=show.title}}</div>
-            </div>
+            </a>
         {{??}}
             <div class="live-show-title">{{=show.title}}</div>
         {{?}}
@@ -15,14 +15,11 @@
             </date>,
             {{=show.location}}
         </div>
+        {{? show.description }}
+        <div class="live-show-description">{{=show.description}}</div>
+        {{?}}
         {{? show.link }}
             <a href="{{=show.link}}" target="_blank" rel="noopener">Website</a>
-        {{?}}
-        {{? show.flyer }}
-            <a href="{{=show.flyer}}" target="_blank" rel="noopener">Flyer</a>
-        {{?}}
-        {{? show.description }}
-            <div class="live-show-description">{{=show.description}}</div>
         {{?}}
     </li>
 {{~}}

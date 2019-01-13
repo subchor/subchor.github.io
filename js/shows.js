@@ -62,7 +62,10 @@
                 nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
             })
 
-            document.getElementById("live-upcomming-empty").remove()
+            var emptyText = document.getElementById("live-upcomming-empty")
+            if(emptyText) {
+                emptyText.remove()
+            }
         }
 
         // render past shows

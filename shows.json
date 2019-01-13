@@ -43,7 +43,8 @@
     "title": "TOXIC bis Finster: von Britney bis Brecht",
     "location": "Espacio Montevideo, Stadtbahnbögen 117, 1180 Wien",
     "description": "Ein gemeinsamer Chorabend mit dem Nobelchor und dem Subchor! Das Repertoire reicht von politischen Songs über Pop-Hits bis zu gälischen Schlafliedern! Beginn: 20:00",
-    "link": "https://www.facebook.com/events/1034010486750365/"
+    "link": "https://www.facebook.com/events/1034010486750365/",
+    "flyer": "/img/flyer/2018-05-30-toxic-finster.jpg"
   },
   {
     "date": "2018-05-11",
@@ -55,7 +56,8 @@
     "title": "Urban bloom Festival",
     "location": "Vronihof Open Air Bühne, 1170 Wien, Veronikagasse 24",
     "description": "Der Subchor erblüht am Eröffnungstag des Urban Bloom Festivals 2018. Ca. ab 18 Uhr",
-    "link": "http://www.kulturstuetzverband.at/programm/"
+    "link": "http://www.kulturstuetzverband.at/programm/",
+    "flyer": "/img/flyer/2018-04-19-urban-bloom.jpg"
   },
   {
     "date": "2018-02-16",
@@ -102,14 +104,16 @@
     "title": "10 Jahre Foodcoops in Österreich",
     "location": "Schutzhaus Zukunft auf der Schmelz",
     "description": "Trotz Sonntag lassen sich die österreichischen Foodcoops anlässlich ihres zehnjährigen Bestehens besingen. Um 17:00.",
-    "link": "foodcoops.at/2017/08/28/fest-10-jahre-foodcoops/"
+    "link": "https://foodcoops.at/2017/08/28/fest-10-jahre-foodcoops/",
+    "flyer": "/img/flyer/2017-10-08-foodcoops.jpg"
   },
   {
     "date": "2017-10-06",
     "title": "Eröffnung urbanize!",
     "location": " Az W Architekturzentrum Wien",
     "description": "urbanize! Festival für urbane Erkundungen. Partizipativer Wohlgesang um 19 Uhr, zuvor und im Anschluss Begrüßungen, Interventionen, Eröffnungen, Gespräche..",
-    "link": "http://www.urbanize.at/"
+    "link": "http://www.urbanize.at/",
+    "flyer": "/img/flyer/2017-10-06-urbanize.jpg"
   },
   {
     "date": "2017-09-16",

@@ -41,7 +41,7 @@
             show.dateFriendly = formatDate(show.date)
             if(show.date >= today) {
                 upcommingShows.push(show)
-            } else if (!pastMax || pastShows.length <= 5){
+            } else if (!pastMax || pastShows.length < parseInt(pastMax, 10)){
                 pastShows.push(show)
             }
         })

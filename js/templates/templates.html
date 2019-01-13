@@ -1,7 +1,13 @@
 <div id="showlist">
 {{~it.shows :show:index }}
     <li class="live-show">
-        <strong class="live-show-title">{{=show.title}}</strong>
+        {{? show.flyer }}
+            <div class="live-show-flyer" style="background-image: url({{=show.flyer}});">
+                <div class="live-show-title">{{=show.title}}</div>
+            </div>
+        {{??}}
+            <div class="live-show-title">{{=show.title}}</div>
+        {{?}}
         <div class="live-show-date-location">
             <date date-time="{{=show.date}}">
                 {{=show.dateFriendly}}

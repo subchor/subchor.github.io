@@ -32,6 +32,7 @@
                     var js = document.createElement("script")
                     js.setAttribute("type","text/javascript")
                     js.setAttribute("src", polyfills[key])
+                    document.head.appendChild(js)
                 }
             })
     </script>

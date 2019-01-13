@@ -419,13 +419,12 @@ a:active {
 }
 
 .fb-page.fb_iframe_widget, .fb-xfbml-parse-ignore {
-    margin: 20px 50px;
+    margin: 20px;
     position: relative;
     z-index: 5;
 }
 /* fallback when Facebook widget is blocked*/
 .fb-xfbml-parse-ignore {
-    width: 250px;
     padding: 10px;
     background: rgba(255,255,255,0.7);
     animation: waitfadein 5s; /* give fb widget 4s to load before fading in */
@@ -443,7 +442,8 @@ a:active {
     }
     
     .fb-page {
-        flex: 0 0 270px;
+        flex: 0 0 300px;
+        margin: 0;
     }
 }
 

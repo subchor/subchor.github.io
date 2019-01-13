@@ -124,8 +124,10 @@
                 Die komplette Historie gibt es in der <a href="archiv.html">Gigografie</a>.
             </div>
 
-            <div id="fb-widget" class="fb-page" data-href="https://www.facebook.com/subchor/" data-tabs="timeline" data-width="250" data-height="500"
-                data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+            <div id="fb-widget" class="fb-page" data-href="https://www.facebook.com/subchor/"
+                data-tabs="timeline" data-width="300" data-height="500"
+                data-adapt-container-width="true"
+                data-small-header="true" data-hide-cover="true" data-show-facepile="false">
                 <div class="fb-xfbml-parse-ignore">
                     <blockquote cite="https://www.facebook.com/subchor/">
                         Aktuelle Infos auf unserer <a href="https://www.facebook.com/subchor/">Facebook-Seite</a>
@@ -262,12 +264,16 @@
     *****/
     var fbWidgetEl = document.getElementById('fb-widget')
     if(fbWidgetEl && fbWidgetEl.dataset) {
-        var liveEl = document.getElementById('live')
-        var widgetHeight = Math.max(
-            (liveEl.clientHeight - 150),
-            fbWidgetEl.dataset.height,
-        )
-        fbWidgetEl.dataset.height = widgetHeight
+        if(document.body.clientWidth < 800) {
+            fbWidgetEl.dataset.width = document.body.clientWidth - 40
+        } else {
+            var liveEl = document.getElementById('live')
+            var widgetHeight = Math.max(
+                (liveEl.clientHeight - 150),
+                fbWidgetEl.dataset.height,
+            )
+            fbWidgetEl.dataset.height = widgetHeight
+        }
     }
 
 

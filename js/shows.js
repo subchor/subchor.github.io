@@ -53,6 +53,7 @@
             .then(function(tmpl){
                 var upcommingEl = document.getElementById("live-upcomming-list")
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
+                initLightbox()
             })
 
             getTemplate("next-gig")
@@ -68,6 +69,7 @@
         getTemplate("showlist")
         .then(function(tmpl){
             pastEl.innerHTML = tmpl({shows: pastShows})
+            initLightbox()
         })
     })
 
@@ -83,5 +85,11 @@
         var monthIndex = date.getMonth()
         var year = date.getFullYear()
         return day + ". " + monthNames[monthIndex] + " " + year
+    }
+
+    var initLightbox = function() {
+        if(window.baguetteBox && typeof window.baguetteBox.run === 'function') {
+            baguetteBox.run('.live-shows');
+        }
     }
 })()

@@ -14,6 +14,16 @@ section {
     padding-top: 3em;
 }
 
+a {
+    color: #f7797d;
+}
+a:hover,
+a:focus {
+    color: #f7c779;
+}
+a:active {
+    color: #a4ffc2;
+}
 
 @keyframes waitfadein {
     0% { opacity: 0; }

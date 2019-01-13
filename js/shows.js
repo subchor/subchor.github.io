@@ -64,9 +64,10 @@
                 })
             }
 
+        } else {
             var emptyText = document.getElementById("live-upcomming-empty")
             if(emptyText) {
-                emptyText.remove()
+                emptyText.style.display = "block"
             }
         }
 

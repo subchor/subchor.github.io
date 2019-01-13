@@ -56,11 +56,13 @@
                 initLightbox()
             })
 
-            getTemplate("next-gig")
-            .then(function(tmpl){
-                var nextGigEl = document.getElementById("next-gig")
-                nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
-            })
+            var nextGigEl = document.getElementById("next-gig")
+            if(nextGigEl) {
+                getTemplate("next-gig")
+                .then(function(tmpl){
+                    nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
+                })
+            }
 
             var emptyText = document.getElementById("live-upcomming-empty")
             if(emptyText) {

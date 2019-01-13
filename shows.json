@@ -1,17 +1,20 @@
 [
     {
     "date": "2019-02-22",
+    "time": "20:00",
     "title": "Do they owe us a living? - 9 Jahre Subchor!",
     "location": "AU. Brunnengasse 76, 1160 Wien.",
     "description": "Der Subchor ist nun schon bald so alt wie seine jüngsten Mitglieder. Wir feiern das trotzdem noch. Details folgen.",
-    "link": "https://www.facebook.com/events/784606805227130/"
+    "link": "https://www.facebook.com/events/784606805227130/",
+    "flyer": "/img/flyer/2019-02-22-9jahre.jpg"
   },
     {
     "date": "2018-12-20",
     "title": "Besinnungslose Chorweihnachten",
     "location": "Roter Bogen, Wien",
     "description": "Erstmals öffentliche Weihnachtsfeier des Subchors. Inkl. Wichtelbrimborium.",
-    "link": "https://www.facebook.com/events/348956705904584/"
+    "link": "https://www.facebook.com/events/348956705904584/",
+    "flyer": "/img/flyer/2018-12-20-chorweihnacht.jpg"
   },
     {
     "date": "2018-09-08",

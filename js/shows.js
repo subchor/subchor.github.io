@@ -49,18 +49,19 @@
         // render upcomming shows
         if(upcommingShows.length) {
             upcommingShows.reverse()
-            getTemplate("upcomming")
+            getTemplate("showlist")
             .then(function(tmpl){
-                var upcommingEl = document.getElementById("live-upcomming")
+                var upcommingEl = document.getElementById("live-upcomming-list")
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
             })
-
 
             getTemplate("next-gig")
             .then(function(tmpl){
                 var nextGigEl = document.getElementById("next-gig")
                 nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
             })
+
+            document.getElementById("live-upcomming-empty").remove()
         }
 
         // render past shows

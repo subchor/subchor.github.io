@@ -29,7 +29,8 @@
     "title": "Offene Chorprobe",
     "location": "Held*Innenzentrale, Brünner Straße 7, 1210 Wien",
     "description": "Offene bzw. öffentliche Probe bei den SuperheldInnen in Floridsdorf.",
-    "link": "http://www.wirkommen.at"
+    "link": "http://www.wirkommen.at",
+    "flyer": "/img/flyer/2018-06-28-superhelden.jpg"
   },
   {
     "date": "2018-06-08",
@@ -127,7 +128,8 @@
     "title": "PARK(ing) DAY 2017",
     "location": "zwiePARK, Effingergasse × Wurlitzergasse, 1160",
     "description": "Subchor rockt die Grätzloase.",
-    "link": "https://facebook.com/events/112227396125910"
+    "link": "https://facebook.com/events/112227396125910",
+    "flyer": "/img/flyer/2017-09-15-parking-day.jpg"
   },
   {
     "date": "2017-06-26",
@@ -141,21 +143,24 @@
     "title": "A Very Friendly Takeover",
     "location": "Bibliothek von unten, Wipplingerstraße 23, 1010",
     "description": "Lesungen, Chor, DJanes, Bücherflohmarkt.",
-    "link": "https://www.facebook.com/events/131029130787772/"  
+    "link": "https://www.facebook.com/events/131029130787772/",
+    "flyer": "/img/flyer/2017-06-09-abib.jpg"
   },
   {
     "date": "2017-02-17",
     "title": "7 Jahre SUBCHOR-Yubilaeioum",
     "location": "Vronihof, Veronikagasse 24, 1170",
     "description": "What?! Der Subchor hat schon wieder Geburtstag und wird auf den Tag genau verflixte SIEBEN Jahre alt! SAVE THE DATE für das Yubilaeioumsfest in unserer schönen Bleibe, dem Vronihof nächst Yppenplatz.",
-    "link": "https://www.facebook.com/events/376561396044465/"  
+    "link": "https://www.facebook.com/events/376561396044465/",
+    "flyer": "/img/flyer/2017-02-17-7jahr.jpg" 
   },
   {
     "date": "2017-02-04",
     "title": "2. Wurst vom Hund Ball",
     "location": "Stadtwerkstatt, Linz",
     "description": "Schöner, größer, goldener und noch mehr Glitzer - nach dem fulminanten Erfolg des ersten WurstvomHundballs gehen wir im Februar in die nächste Runde. Denn wir haben KEINE ANGST VOR VIELFALT und wollen dafür ein Zeichen setzen.",
-    "link": "https://www.facebook.com/events/362413534092424/"  
+    "link": "https://www.facebook.com/events/362413534092424/",
+    "flyer": "/img/flyer/2017-02-04-wurst-vom-hund.jpg"
   },
   {
     "date": "2016-12-16",
@@ -175,7 +180,8 @@
     "title": "TastenWahnSinn 9",
     "location": "Church of Bikes, Florianigasse 68/2",
     "description": 0,
-    "link": "https://www.facebook.com/events/176439456140767/"
+    "link": "https://www.facebook.com/events/176439456140767/",
+    "flyer": "/img/flyer/2016-11-11-tws9.jpg"
   }, 
   {
     "date": "2016-10-01",

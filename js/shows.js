@@ -10,21 +10,56 @@
  */
 
 (function(){
+    var compiledTemplates = {
+        'showlist': function anonymous(it) {
+            var out='';var arr1=it.shows;if(arr1){var show,index=-1,l1=arr1.length-1;while(index<l1){show=arr1[index+=1];out+=' <li class="live-show"> ';if(show.flyer){out+=' <a href="'+(show.flyer)+'" target="_blank" rel="noopener" class="live-show-flyer" style="background-image: url('+(show.flyer)+');"> <div class="live-show-title">'+(show.title)+'</div> </a> ';}else{out+=' <div class="live-show-title">'+(show.title)+'</div> ';}out+=' <div class="live-show-date-location"> '+(show.dateFriendly);if(show.time){out+=' ab '+(show.time);}out+=', '+(show.location)+' </div> ';if(show.description){out+=' <div class="live-show-description">'+(show.description)+'</div> ';}out+=' ';if(show.link){out+=' <a href="'+(show.link)+'" target="_blank" rel="noopener">Website</a> ';}out+=' </li>';} } return out;
+        },
+        'next-gig': function anonymous(it) {
+            var out=' Nächster Auftritt: '+(it.show.title)+', '+(it.show.dateFriendly);return out;
+        }
+    }
     // load doT templates
-    var templateHolder = fetch("js/templates/templates.html")
-        .then(function(response){
-            return response.text()
+    var templateHolder = function() {
+        return new Promise(function(resolve, reject){
+            var script = document.createElement('script')
+            script.onload = function () {
+                return fetch("js/templates/templates.html")
+                .then(function(response){
+                    return response.text()
+                })
+                .then(function(tmpl){
+                    var div = document.createElement("div")
+                    div.innerHTML = tmpl
+                    resolve(div)
+                })
+                .catch(reject)
+            };
+            script.src = "js/vendor/doT.min.js"
+            document.head.appendChild(script)
         })
-        .then(function(tmpl){
-            var div = document.createElement("div")
-            div.innerHTML = tmpl
-            return div
-        })
+    }
     var getTemplate = function(name){
-        return templateHolder.then(function(div){
-                var tmplDOM = div.querySelector("#"+name)
-                return doT.template(tmplDOM.innerHTML)
-            })
+        var isProduction = location.hostname === 'subchor.at'
+        if(isProduction && name in compiledTemplates) {
+            return Promise.resolve(compiledTemplates[name])
+        } else {
+            return templateHolder().then(function(div){
+                    var tmplDOM = div.querySelector("#"+name)
+                    var compiled = doT.template(tmplDOM.innerHTML)
+                    var asString = compiled.toString()
+                    var trimF = function(str) {
+                        return str.replace(/\r?\n|\r/g, '').replace(/\s/g,'').replace(/\\/g,'')
+                    }
+                    if(!(name in compiledTemplates) || trimF(compiledTemplates[name].toString()) !== trimF(asString)) {
+                        console.warn("Compiled function for template '" + name + "' needs update:", asString)
+                        if(!isProduction) {
+                            window.alert('Update template function: ' + name)
+                        }
+                    }
+                    return compiled
+                })
+
+        }
     }
 
     // load JSON with show data

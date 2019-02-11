@@ -256,7 +256,6 @@
         offset: 50,
         callback: function(nav) {
             if(nav && nav.target && nav.target.id === 'video' && !loadedYT) {
-                console.log('load YT')
                 loadedYT = true
                 nav.target.querySelector('iframe').src = 'https://www.youtube.com/embed/videoseries?list=PL8epmI_wYJ9JZYjF8VOlpK80jZ9YNNpWL'
             }

@@ -41,15 +41,6 @@
 </head>
 <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.6&appId=263591930651394";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <nav class="top-nav">
     <a href="javascript://" id="collapse">⋮</a>
     <ul data-gumshoe>
@@ -248,16 +239,43 @@
     }
 
     /*****
+     * Social media stuff
+    *****/
+    var loadedFB = false
+    var initFacebook = function() {
+        if(loadedFB) {
+            return
+        }
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.6&appId=263591930651394";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    }
+
+    var loadedYT = false
+    var initYouTube = function(el) {
+        if(loadedYT) {
+            return
+        }
+        loadedYT = true
+        el.querySelector('iframe').src = 'https://www.youtube.com/embed/videoseries?list=PL8epmI_wYJ9JZYjF8VOlpK80jZ9YNNpWL'
+    }
+
+    /*****
      * Scrolling / Navbar highlight
     ****/
     new SmoothScroll('a[href*="#"]')
-    var loadedYT = false
     gumshoe.init({
-        offset: 50,
+        offset: 250,
         callback: function(nav) {
-            if(nav && nav.target && nav.target.id === 'video' && !loadedYT) {
-                loadedYT = true
-                nav.target.querySelector('iframe').src = 'https://www.youtube.com/embed/videoseries?list=PL8epmI_wYJ9JZYjF8VOlpK80jZ9YNNpWL'
+            var targetId = nav && nav.target && nav.target.id
+            if(targetId === 'video') {
+                initYouTube(nav.target)
+            } else if(targetId === 'live') {
+                initFacebook()
             }
         }
     })

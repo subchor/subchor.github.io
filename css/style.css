@@ -247,9 +247,14 @@ a:active {
     text-decoration: none;
     position: relative;
     top: 20px;
+    transition: all ease-out 0.2s;
 }
 #next-gig:empty {
     visibility: hidden;
+}
+#next-gig:hover {
+    color: #922327;
+    background: rgba(255,255,255, 0.6);
 }
 .section-landing .logo {
     padding-top: 25vh;

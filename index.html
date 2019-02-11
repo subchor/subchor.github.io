@@ -51,7 +51,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<nav id="top-nav" data-gumshoe-header>
+<nav class="top-nav" data-gumshoe-header>
     <a href="javascript://" id="collapse">⋮</a>
     <ul data-gumshoe>
         <li><a data-scroll href="#landing" class="active to-top">
@@ -66,20 +66,20 @@
     </ul>
 </nav>
 
-<section id="landing">
+<section id="landing" class="section-landing">
     <a href="#live" id="next-gig"></a>
-    <img src="img/logo-simplified.svg" id="logo" alt="Chor-Logo - ein Tortenspitzendeckchen">
-    <h2 id="slogan">We sing, we lubricate</h2>
-    <div id="slogan-source">David Hill</div>
-    <div id="horse">
-        <div id="tail"></div>
+    <img src="img/logo-simplified.svg" class="logo" alt="Chor-Logo - ein Tortenspitzendeckchen">
+    <h2 class="slogan">We sing, we lubricate</h2>
+    <div class="slogan-source">David Hill</div>
+    <div class="horse">
+        <div class="tail"></div>
     </div>
 </section>
 
-<div id="text-blocks">
-    <img src="img/logo-simplified.svg" id="text-backdrop" alt="Das Chorlogo als Hintergrund">
+<div class="text-blocks">
+    <img src="img/logo-simplified.svg" class="text-backdrop" alt="Das Chorlogo als Hintergrund">
 
-    <section id="about">
+    <section id="about" class="section-about">
         <div class="text">
             <p>
                 Der <span title="manchmal auch bezeichnet als: Der Räudige Arbeiterinnenchor 3000 Jackson">Subchor</span>
@@ -106,7 +106,7 @@
         </div>
     </section>
 
-    <section id="live">
+    <section id="live" class="section-live">
         <div class="flex-container">
             <div class="text">
                 <div id="live-upcomming">
@@ -138,7 +138,7 @@
         </div>
     </section>
 
-    <section id="join">
+    <section id="join" class="section-join">
         <div class="text">
             <h2>Mitmachen:</h2>
             <p>Geprobt wird zumeist einmal pro Woche. Der Einstieg ist jederzeit möglich, vorbehaltlich
@@ -148,7 +148,7 @@
         </div>
     </section>
 
-    <section id="book">
+    <section id="book" class="section-book">
         <div class="text">
             <h2>Buchen:</h2>
             <p>Der Chor tritt überall auf, wo folgende Bedingungen erfüllt sind und die ProtagonistInnen gerne singen:</p>
@@ -164,13 +164,13 @@
 
 </div>
 
-<section id="video">
+<section id="video" class="section-video">
     <iframe width="853" height="480" title="Videoaufnahmen vom Chor"
         src="https://www.youtube.com/embed/videoseries?list=PL8epmI_wYJ9JZYjF8VOlpK80jZ9YNNpWL"
         frameborder="0" allowfullscreen></iframe>
 </section>
 
-<section id="photos">
+<section id="photos" class="section-photos">
     <div>
         <a href="#photos" class="photo-nav prev" data-nav="-1">&#9756;</a>
             <img src="" id="photo" alt="Bilder von Auftritten, Proben und sonstigen Aktivitäten" />
@@ -188,8 +188,6 @@
 </section>
 
 <footer>
-
-
     <span class="copyleft">&copy;</span> subchor <span title="This is a lie.">1996</span>-2019,
     <a href="impressum.txt">Impressum</a>,
     <a href="archiv.html" title="Bisherige Auftritte">Gigografie</a>
@@ -225,19 +223,19 @@
 
     var sloganNb = rand(slogans.length-1)
     var slogan = slogans[sloganNb]
-    document.getElementById("slogan")
+    document.querySelector(".slogan")
         .innerText = slogan.text
-    document.getElementById("slogan-source")
+    document.querySelector(".slogan-source")
         .innerText = slogan.source
 
     document.getElementById("landing")
         .classList.add("bg"+rand(28))  // <--- number of background images available, has to match CSS classes
 
-    var navLinks = document.querySelectorAll("#top-nav a")
+    var navLinks = document.querySelectorAll(".top-nav a")
     for(var i = 0; i < navLinks.length; i++) {
         var link = navLinks[i]
         link.onclick = function(){
-            var nav = document.querySelector("#top-nav")
+            var nav = document.querySelector(".top-nav")
             nav.style.display = "none"
             window.setTimeout(function(){
                 nav.style.display = "block"

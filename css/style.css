@@ -41,7 +41,7 @@ a:active {
  * NAV   *
  *********/
 
-#top-nav {
+.top-nav {
     background: rgba(0,0,0,0.7);
     position: fixed;
     height: 48px;
@@ -50,11 +50,11 @@ a:active {
     z-index: 100;
     overflow: hidden;
 }
-#top-nav ul, #top-nav li {
+.top-nav ul, .top-nav li {
     display: inline;
     padding: 0;
 }
-#top-nav li a {
+.top-nav li a {
     color: #ddd;
     text-decoration: none;
     font-size: 24px;
@@ -63,33 +63,33 @@ a:active {
     top: 7px;
     transition: all 0.3s ease-in;
 }
-#top-nav a.active:not([href="#landing"]) {
+.top-nav a.active:not([href="#landing"]) {
     background: rgba(255,255,255,0.4);
 }
-#top-nav a.active[href="#landing"] img {
+.top-nav a.active[href="#landing"] img {
     top: -50px;
 }
-#top-nav a[href="#landing"] img {
+.top-nav a[href="#landing"] img {
     height: 36px;
     margin-top: -20px;
     top: 11px;
     position: relative;
     transition: top 0.3s ease-in;
 }
-#top-nav a[href="#landing"] span {
+.top-nav a[href="#landing"] span {
     display: none;
 }
-#top-nav #collapse {
+.top-nav #collapse {
     display: none;
 }
 
 @media (max-width: 960px) {
-    #top-nav {
+    .top-nav {
         width: 48px;
         overflow: visible;
         padding: 0;
     }
-    #top-nav ul {
+    .top-nav ul {
         display: block;
         width: 960px;
         background: rgba(0,0,0,0.7);
@@ -101,7 +101,7 @@ a:active {
         position: absolute;
         transition: margin .2s ease-out;
     }
-    #top-nav #collapse {
+    .top-nav #collapse {
         display: block;
         color: #fff;
         font-weight: bold;
@@ -110,29 +110,29 @@ a:active {
         width: 48px;
         text-align: center;
     }
-    #top-nav:hover #collapse {
+    .top-nav:hover #collapse {
         border-bottom: 72px solid transparent;
     }
-    #top-nav:hover ul {
+    .top-nav:hover ul {
         margin-left: 48px;
     }
-    #top-nav li {
+    .top-nav li {
         display: block;
         border-bottom: 1px solid #eee;
     }
-    #top-nav li a {
+    .top-nav li a {
         top: 0;
         padding: 16px 20px 15px;
         display: block;
         font-size: 16px;
     }
-    #top-nav li a:hover {
+    .top-nav li a:hover {
         background: rgba(255,255,255,0.3);
     }
-    #top-nav a[href="#landing"] img {
+    .top-nav a[href="#landing"] img {
         display: none;
     }
-    #top-nav a[href="#landing"] span {
+    .top-nav a[href="#landing"] span {
         display: inline;
     }
 }
@@ -142,7 +142,7 @@ a:active {
  * Landing
  *********/
 
-#landing {
+.section-landing {
     background: #99B1BD;
     background-repeat:  no-repeat;
     background-size: cover;
@@ -151,91 +151,91 @@ a:active {
     position: relative;
     background-image: url(../img/bg/E0A1233.jpg);
 }
-#landing.bg0 {
+.section-landing.bg0 {
     background-image: url(../img/bg/004_5613653205_o.jpg);
 }
-#landing.bg1 {
+.section-landing.bg1 {
     background-image: url(../img/bg/20151120-_MG_2966_c-marlies-surtmann.jpg);
 }
-#landing.bg2 {
+.section-landing.bg2 {
     background-image: url(../img/bg/20151120-_MG_2993_c-marlies-surtmann.jpg);
 }
-#landing.bg3 {
+.section-landing.bg3 {
     background-image: url(../img/bg/20151121-_MG_3032_c-marlies-surtmann.jpg);
 }
-#landing.bg4 {
+.section-landing.bg4 {
     background-image: url(../img/bg/20151121-_MG_3038_c-marlies-surtmann.jpg);
 }
-#landing.bg5 {
+.section-landing.bg5 {
     background-image: url(../img/bg/4-jahre-subchor_14148159466_o.jpg);
 }
-#landing.bg6{
+.section-landing.bg6{
     background-image: url(../img/bg/DSC_1251_c_rupi.jpg);
 }
-#landing.bg7 {
+.section-landing.bg7 {
     background-image: url(../img/bg/DSC_1302.jpg);
 }
-#landing.bg8 {
+.section-landing.bg8 {
     background-image: url(../img/bg/DSCF1315.jpg);
 }
-#landing.bg9 {
+.section-landing.bg9 {
     background-image: url(../img/bg/E0A1161.jpg);
 }
-#landing.bg10 {
+.section-landing.bg10 {
     background-image: url(../img/bg/E0A1233.jpg);
 }
-#landing.bg11 {
+.section-landing.bg11 {
     background-image: url(../img/bg/E0A1286.jpg);
 }
-#landing.bg12 {
+.section-landing.bg12 {
     background-image: url(../img/bg/E0A1287_chor_faellt_c_brut_fb.jpg);
 }
-#landing.bg13 {
+.section-landing.bg13 {
     background-image: url(../img/bg/E0A1491.jpg);
 }
-#landing.bg14 {
+.section-landing.bg14 {
     background-image: url(../img/bg/flatten_choir.jpg);
 }
-#landing.bg15 {
+.section-landing.bg15 {
     background-image: url(../img/bg/gehsteigfestival_5852001557_o.jpg);
 }
-#landing.bg16 {
+.section-landing.bg16 {
     background-image: url(../img/bg/IMG_2031.jpg);
 }
-#landing.bg17 {
+.section-landing.bg17 {
     background-image: url(../img/bg/IMG_2180.jpg);
 }
-#landing.bg18 {
+.section-landing.bg18 {
     background-image: url(../img/bg/IMG_8979_c_mar.jpg);
 }
-#landing.bg19 {
+.section-landing.bg19 {
     background-image: url(../img/bg/IMG_9138_c_hasibi.jpg);
 }
-#landing.bg20 {
+.section-landing.bg20 {
     background-image: url(../img/bg/IMG_9179_Panorama_c_hasibi.jpg);
 }
-#landing.bg21 {
+.section-landing.bg21 {
     background-image: url(../img/bg/konzert-in-der-schenke_15020581884_o.jpg);
 }
-#landing.bg22 {
+.section-landing.bg22 {
     background-image: url(../img/bg/subchor-1bm_8118744466_o.jpg);
 }
-#landing.bg23 {
+.section-landing.bg23 {
     background-image: url(../img/bg/subchor--hidden-cameras_8794169482_o.jpg);
 }
-#landing.bg24 {
+.section-landing.bg24 {
     background-image: url(../img/bg/subchor--hidden-cameras_8794177308_o.jpg);
 }
-#landing.bg25 {
+.section-landing.bg25 {
     background-image: url(../img/bg/E0A1287_chor_faellt_c_brut_fb.jpg);
 }
-#landing.bg26 {
+.section-landing.bg26 {
     background-image: url(../img/bg/wienwirbel_1_6880477201_o.jpg);
 }
-#landing.bg27 {
+.section-landing.bg27 {
     background-image: url(../img/bg/wohltemperiert.jpg);
 }
-#landing.bg28 {
+.section-landing.bg28 {
     background-image: url(../img/bg/DSC_3292.jpg);
 }
 
@@ -251,14 +251,14 @@ a:active {
 #next-gig:empty {
     visibility: hidden;
 }
-#logo {
+.section-landing .logo {
     padding-top: 25vh;
     width: 128px;
     display: block;
     margin-right: auto;
     margin-left: auto;
 }
-#slogan {
+.section-landing .slogan {
     padding-top: 5vh;
     display: inline-block;
     background: rgba(0,0,0, 0.2);
@@ -268,33 +268,35 @@ a:active {
     margin-bottom: 10px;
     max-width: 70%;
 }
-#slogan-source {
+.section-landing .slogan-source {
     color: #ccc;
 }
-#slogan:before {
+.section-landing .slogan:before {
     content: '“';
 }
-#slogan:after {
+.section-landing .slogan:after {
     content: '”';
 }
-#slogan, #slogan-source {
+.section-landing .slogan, .slogan-source {
     position: relative;
     z-index: 5;
 }
 
-#horse {
+.horse {
     position: absolute;
-    bottom: -110px;
-    left: 50%;
-    transform: translateX(-50%);
     background-image: url(../img/pferd.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 200px;
     height: 200px;
+}
+.section-landing .horse {
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
-#horse #tail {
+.horse .tail {
     position: relative;
     background-image: url(../img/schweif.png);
     background-size: contain;
@@ -305,23 +307,23 @@ a:active {
     opacity: .6;
     transition: all .5s ease-out;
 }
-#horse:hover #tail {
+.horse:hover .tail {
     opacity: 1;
     transform: rotate(10deg);
     transform-origin: 100% 55%;
 }
 
 @media (max-height: 600px) {
-    #logo {
+    .section-landing .logo {
         padding-top: 50px;
     }
 }
 
 @media (max-width: 960px) {
-    #logo {
+    .section-landing .logo {
         padding-top: 50px;
     }
-    #slogan {
+    .section-landing .slogan {
         max-width: 90%;
     }
 }
@@ -333,11 +335,11 @@ a:active {
  * live, join, and book *
  ************************/
 
-#text-blocks {
+.text-blocks {
     overflow: hidden;
     position: relative;
 }
-#text-backdrop {
+.text-backdrop {
     position: absolute;
     display: block;
     height: 400vh;
@@ -356,7 +358,7 @@ a:active {
 }
 
 @media (max-width: 600px) {
-    #text-backdrop {
+    .text-backdrop {
         height: 400vh;
         left: -10%;
         top: -5vh;
@@ -368,7 +370,7 @@ a:active {
  * ABOUT *
  *********/
 
-#about {
+.section-about {
     background: #EF8696;
 }
 
@@ -376,7 +378,7 @@ a:active {
  * LIVE  *
  *********/
 
-#live {
+.section-live {
     background: #DAFF67;
     padding-bottom: 50px;
 }
@@ -438,12 +440,12 @@ a:active {
 
 /* place FB widget on right side next to text on large devices */
 @media (min-width: 800px) {
-    #live .flex-container {
+    .section-live .flex-container {
         display: flex;
         max-width: 960px;
         margin: 0 auto;
     }
-    #live .flex-container .text {
+    .section-live .flex-container .text {
         flex: 1 1 auto;
     }
     
@@ -456,28 +458,28 @@ a:active {
 /***************
  * JOIN & BOOK *
  **************/
-#join, #book {
+.section-join, .section-book {
     min-height: 50vh;
     padding-bottom: 2rem;
 }
-#join {
+.section-join {
     background: #91F8B6;
 }
-#book {
+.section-book {
     background: #CDFBFF;
 }
 
 
 @media (min-width: 960px) {
-    #join, #book {
+    .section-join, .section-book {
         width: 50%;
         float: left;
         min-height: 100vh;
     }
-    #join .text, #book .text {
+    .section-join .text, .section-book .text {
         padding: 0 50px;
     }
-    #video {
+    .section-video {
         clear: left;
     }
 }
@@ -487,10 +489,10 @@ a:active {
  * Video *
  *********/
 
-#video {
+.section-video {
     background: #4E4E4E;
 }
-#video iframe {
+.section-video iframe {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -502,13 +504,13 @@ a:active {
  * Photos *
  *********/
 
-#photos {
+.section-photos {
     background: #8B7474;
 }
-#photos > div {
+.section-photos > div {
     text-align: center;
 }
-#photos img {
+.section-photos img {
     max-height: 80vh;
     max-width: 80vw;
 }

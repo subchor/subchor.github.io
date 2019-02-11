@@ -50,7 +50,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<nav class="top-nav" data-gumshoe-header>
+<nav class="top-nav">
     <a href="javascript://" id="collapse">⋮</a>
     <ul data-gumshoe>
         <li><a data-scroll href="#landing" class="active to-top">
@@ -161,9 +161,7 @@
 </div>
 
 <section id="video" class="section-video">
-    <iframe width="853" height="480" title="Videoaufnahmen vom Chor"
-        src="https://www.youtube.com/embed/videoseries?list=PL8epmI_wYJ9JZYjF8VOlpK80jZ9YNNpWL"
-        frameborder="0" allowfullscreen></iframe>
+    <iframe width="853" height="480" title="Videoaufnahmen vom Chor" src="" frameborder="0" allowfullscreen></iframe>
 </section>
 
 <section id="photos" class="section-photos">
@@ -253,7 +251,17 @@
      * Scrolling / Navbar highlight
     ****/
     new SmoothScroll('a[href*="#"]')
-    gumshoe.init()
+    var loadedYT = false
+    gumshoe.init({
+        offset: 50,
+        callback: function(nav) {
+            if(nav && nav.target && nav.target.id === 'video' && !loadedYT) {
+                console.log('load YT')
+                loadedYT = true
+                nav.target.querySelector('iframe').src = 'https://www.youtube.com/embed/videoseries?list=PL8epmI_wYJ9JZYjF8VOlpK80jZ9YNNpWL'
+            }
+        }
+    })
 
     /*****
      * set height of Facebook widget

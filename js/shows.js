@@ -3,7 +3,7 @@
  * information in the current document. Populates the elements 
  * marked by the following HTML data-attributes:
  * 
- * data-live-next-link: innerTExt is set to the title of the next upcomming show
+ * data-live-next-link: innerText is set to the title of the next upcomming show
  * data-live-upcomming: renders a list of all upcomming shows
  * data-live-upcomming-empty: visibility is toggled depending on upcomming shows
  * data-live-past: renders a list of past shows
@@ -18,7 +18,7 @@
             var out=' Nächster Auftritt: '+(it.show.title)+', '+(it.show.dateFriendly);return out;
         }
     }
-    // load doT templates
+    // load doT engine and templates
     var templateHolder = function() {
         return new Promise(function(resolve, reject){
             var script = document.createElement('script')
@@ -41,8 +41,10 @@
     var getTemplate = function(name){
         var isProduction = location.hostname === 'subchor.at'
         if(isProduction && name in compiledTemplates) {
+            // use compiled render functions in production
             return Promise.resolve(compiledTemplates[name])
         } else {
+            // in development load template, compile and test if it equals pre-compiled version
             return templateHolder().then(function(div){
                     var tmplDOM = div.querySelector("#"+name)
                     var compiled = doT.template(tmplDOM.innerHTML)

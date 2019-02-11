@@ -103,6 +103,7 @@
                 var upcommingEl = document.querySelector("[data-live-upcomming]")
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
                 initLightbox()
+                refreshGumshoe()
             })
 
             var nextGigEl = document.querySelector("[data-live-next-link]")
@@ -125,6 +126,7 @@
         .then(function(tmpl){
             pastEl.innerHTML = tmpl({shows: pastShows})
             initLightbox()
+            refreshGumshoe()
         })
     })
 
@@ -145,6 +147,11 @@
     var initLightbox = function() {
         if(window.baguetteBox && typeof window.baguetteBox.run === 'function') {
             baguetteBox.run('.live-shows');
+        }
+    }
+    var refreshGumshoe = function () {
+        if(window.gumshoe  && typeof window.gumshoe.setDistances === 'function') {
+            gumshoe.setDistances();
         }
     }
 })()

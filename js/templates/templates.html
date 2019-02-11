@@ -16,7 +16,9 @@
         <div class="live-show-description">{{=show.description}}</div>
         {{?}}
         {{? show.link }}
-            <a href="{{=show.link}}" target="_blank" rel="noopener">Website</a>
+            <a href="{{=show.link}}" target="_blank" rel="noopener">
+                {{? show.linkIsFacebook }}Facebook Event{{??}}Website{{?}}
+            </a>
         {{?}}
     </li>
 {{~}}

@@ -12,7 +12,7 @@
 (function(){
     var compiledTemplates = {
         'showlist': function anonymous(it) {
-            var out='';var arr1=it.shows;if(arr1){var show,index=-1,l1=arr1.length-1;while(index<l1){show=arr1[index+=1];out+=' <li class="live-show"> ';if(show.flyer){out+=' <a href="'+(show.flyer)+'" target="_blank" rel="noopener" class="live-show-flyer" style="background-image: url('+(show.flyer)+');"> <div class="live-show-title">'+(show.title)+'</div> </a> ';}else{out+=' <div class="live-show-title">'+(show.title)+'</div> ';}out+=' <div class="live-show-date-location"> '+(show.dateFriendly);if(show.time){out+=' ab '+(show.time);}out+=', '+(show.location)+' </div> ';if(show.description){out+=' <div class="live-show-description">'+(show.description)+'</div> ';}out+=' ';if(show.link){out+=' <a href="'+(show.link)+'" target="_blank" rel="noopener">Website</a> ';}out+=' </li>';} } return out;
+            var out='';var arr1=it.shows;if(arr1){var show,index=-1,l1=arr1.length-1;while(index<l1){show=arr1[index+=1];out+=' <li class=\"live-show\"> ';if(show.flyer){out+=' <a href=\"'+(show.flyer)+'\" target=\"_blank\" rel=\"noopener\" class=\"live-show-flyer\" style=\"background-image: url('+(show.flyer)+');\"> <div class=\"live-show-title\">'+(show.title)+'</div> </a> ';}else{out+=' <div class=\"live-show-title\">'+(show.title)+'</div> ';}out+=' <div class=\"live-show-date-location\"> '+(show.dateFriendly);if(show.time){out+=' ab '+(show.time);}out+=', '+(show.location)+' </div> ';if(show.description){out+=' <div class=\"live-show-description\">'+(show.description)+'</div> ';}out+=' ';if(show.link){out+=' <a href=\"'+(show.link)+'\" target=\"_blank\" rel=\"noopener\"> ';if(show.linkIsFacebook){out+='Facebook Event';}else{out+='Website';}out+=' </a> ';}out+=' </li>';} } return out;
         },
         'next-gig': function anonymous(it) {
             var out=' Nächster Auftritt: '+(it.show.title)+', '+(it.show.dateFriendly);return out;
@@ -85,6 +85,7 @@
         shows.forEach(function(show){
             show.date = new Date(show.date)
             show.dateFriendly = formatDate(show.date)
+            show.linkIsFacebook = show.link && show.link.match(/^(?:https?\:\/\/)?(?:www\.)?facebook\.com\/events\/\d{10,20}\/?$/)
             if(show.date >= today) {
                 upcommingShows.push(show)
             } else if (!pastMax || pastShows.length < parseInt(pastMax, 10)){

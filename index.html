@@ -67,7 +67,7 @@
 </nav>
 
 <section id="landing" class="section-landing">
-    <a href="#live" id="next-gig"></a>
+    <a href="#live" class="next-gig" data-live-next-link></a>
     <img src="img/logo-simplified.svg" class="logo" alt="Chor-Logo - ein Tortenspitzendeckchen">
     <h2 class="slogan">We sing, we lubricate</h2>
     <div class="slogan-source">David Hill</div>
@@ -109,19 +109,16 @@
     <section id="live" class="section-live">
         <div class="flex-container">
             <div class="text">
-                <div id="live-upcomming">
-                    <h2>Die nächsten Auftritte</h2>
-                    <ul class="live-shows" id="live-upcomming-list"></ul>
-                    <div id="live-upcomming-empty" style="display:none;">
-                        Derzeit sind keine Auftritte geplant.
-                        Wenn du eine Idee hast, wo und wie das geändert werden kann -
-                        <a href="#book">immer her damit!</a>
-                    </div>
+                <h2>Die nächsten Auftritte</h2>
+                <ul class="live-shows" data-live-upcomming></ul>
+                <div data-live-upcomming-empty style="display:none;">
+                    Derzeit sind keine Auftritte geplant.
+                    Wenn du eine Idee hast, wo und wie das geändert werden kann -
+                    <a href="#book">immer her damit!</a>
                 </div>
 
-
                 <h3>Zuletzt:</h3>
-                <ul id="live-past" class="live-shows" data-max="5"></ul>
+                <ul class="live-shows" data-live-past data-live-max="5"></ul>
                 Die komplette Historie gibt es in der <a href="archiv.html">Gigografie</a>.
             </div>
 

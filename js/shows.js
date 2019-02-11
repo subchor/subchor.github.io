@@ -1,3 +1,14 @@
+/**
+ * Loads a JSON file with information on shows and renders the
+ * information in the current document. Populates the elements 
+ * marked by the following HTML data-attributes:
+ * 
+ * data-live-next-link: innerTExt is set to the title of the next upcomming show
+ * data-live-upcomming: renders a list of all upcomming shows
+ * data-live-upcomming-empty: visibility is toggled depending on upcomming shows
+ * data-live-past: renders a list of past shows
+ */
+
 (function(){
     // load doT templates
     var templateHolder = fetch("js/templates/templates.html")
@@ -34,8 +45,8 @@
         // separate shows into upcomming and past
         var upcommingShows = []
         var pastShows = []
-        var pastEl = document.getElementById("live-past")
-        var pastMax = pastEl.dataset.max
+        var pastEl = document.querySelector("[data-live-past]")
+        var pastMax = pastEl.dataset.liveMax
         shows.forEach(function(show){
             show.date = new Date(show.date)
             show.dateFriendly = formatDate(show.date)
@@ -51,12 +62,12 @@
             upcommingShows.reverse()
             getTemplate("showlist")
             .then(function(tmpl){
-                var upcommingEl = document.getElementById("live-upcomming-list")
+                var upcommingEl = document.querySelector("[data-live-upcomming]")
                 upcommingEl.innerHTML = tmpl({shows: upcommingShows})
                 initLightbox()
             })
 
-            var nextGigEl = document.getElementById("next-gig")
+            var nextGigEl = document.querySelector("[data-live-next-link]")
             if(nextGigEl) {
                 getTemplate("next-gig")
                 .then(function(tmpl){
@@ -65,7 +76,7 @@
             }
 
         } else {
-            var emptyText = document.getElementById("live-upcomming-empty")
+            var emptyText = document.querySelector("[data-live-upcomming-empty]")
             if(emptyText) {
                 emptyText.style.display = "block"
             }

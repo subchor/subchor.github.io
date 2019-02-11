@@ -240,7 +240,7 @@ a:active {
 }
 
 
-#next-gig {
+.next-gig {
     background: rgba(0,0,0, 0.2);
     padding: 10px;
     color: #fff;
@@ -249,10 +249,10 @@ a:active {
     top: 20px;
     transition: all ease-out 0.2s;
 }
-#next-gig:empty {
+.next-gig:empty {
     visibility: hidden;
 }
-#next-gig:hover {
+.next-gig:hover {
     color: #922327;
     background: rgba(255,255,255, 0.6);
 }

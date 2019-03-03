@@ -61,7 +61,7 @@ FlickrStream.prototype.showPhoto = function(){
     var photo = this.photos[this.nb]
     var opts = this.options
     opts.titleEl.innerText = photo.title
-    opts.flickrLinkEl.href = photo.flickrLink
+    opts.flickrLinkEl.href = photo.flickrUrl
     opts.imgEl.src = photo.imageUrl
 }
 FlickrStream.prototype.preload = function(){

@@ -4,7 +4,6 @@
 ****/
 var searchByTagUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=088e79ad567fb57b47e31915b2d0c8f9&per_page=500&format=json&nojsoncallback=1&media=photos&tags=subchor"
 var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=088e79ad567fb57b47e31915b2d0c8f9&format=json&nojsoncallback=1&&photo_id="
-var flickrUrl = "https://www.flickr.com/groups/subchor/"
 
 fetch(searchByTagUrl)
 .then(function(res){
@@ -35,34 +34,33 @@ var FlickrPhoto = function(raw) {
 }
 FlickrPhoto.prototype.getSizes = function(){
     if(!this._sizesPromise) {
-        var that = this
         this._sizesPromise = fetch(photoSizesUrl + this.id)
             .then(function(res){
                 return res.json()
             })
             .then(function(json){
-                that._sizes = json.sizes.size
+                return json.sizes.size
             })
     }
     return this._sizesPromise
 }
 FlickrPhoto.prototype.getUrlForSize = function(size) {
-    var sizes = this.getSizes()
-    var that = this
-    return new Promise(function(resolve, reject){
-        sizes.then(function(res){
-            var resolved = false
-            that._sizes.forEach(function(sizeObj){
-                if(sizeObj.label === size){
-                    resolve(sizeObj.source)
-                    resolved = true
-                }
+    return this.getSizes()
+        .then(function(sizes) {
+            var sizeObj = sizes.find(function(sizeObj){
+                return sizeObj.label === size
             })
-            if(!resolved) {
-                reject()
+            return sizeObj ? sizeObj.source : undefined
+        })
+}
+FlickrPhoto.prototype.getFlickrLink = function() {
+    return this.getSizes()
+        .then(function(sizes) {
+            if(sizes.length) {
+                var urlMatch = sizes[0].url.match(/(.*)\/sizes\/.*/)
+                return urlMatch ? urlMatch[1] : undefined
             }
         })
-    })
 }
 
 
@@ -88,11 +86,14 @@ FlickrStream.prototype._getNb = function(incr){
 FlickrStream.prototype.showPhoto = function(){
     var photo = this.photos[this.nb]
     var opts = this.options
+    opts.titleEl.innerText = photo.title
     photo.getUrlForSize(opts.size)
         .then(function(url){
             opts.imgEl.src = url
-            opts.titleEl.innerText = photo.title
-            opts.flickrLinkEl.href = flickrUrl + photo.id
+        })
+    photo.getFlickrLink()
+        .then(function(url) {
+            opts.flickrLinkEl.href = url
         })
 }
 FlickrStream.prototype.preload = function(){

@@ -2,10 +2,12 @@
 /*****
  * Embed Photos from Flickr
 ****/
-var searchByTagUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=088e79ad567fb57b47e31915b2d0c8f9&per_page=500&format=json&nojsoncallback=1&media=photos&tags=subchor"
-var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=088e79ad567fb57b47e31915b2d0c8f9&format=json&nojsoncallback=1&&photo_id="
+var FlickrApiKey = "088e79ad567fb57b47e31915b2d0c8f9"
+var FlickrGroupId = "4008006@N22"
+var groupPhotoUrl = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=" + FlickrApiKey + "&per_page=500&format=json&nojsoncallback=1&&group_id=" + FlickrGroupId
+var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=" + FlickrApiKey + "&format=json&nojsoncallback=1&&photo_id="
 
-fetch(searchByTagUrl)
+fetch(groupPhotoUrl)
 .then(function(res){
     return res.json()
 }).then(function(json){

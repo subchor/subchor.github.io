@@ -5,10 +5,8 @@
 var FlickrApiKey = "088e79ad567fb57b47e31915b2d0c8f9"
 var FlickrGroupId = "4008006@N22"
 var groupPhotoUrl = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=" +
-                    FlickrApiKey + "&per_page=500&format=json&nojsoncallback=1&extras=path_alias&group_id=" +
+                    FlickrApiKey + "&per_page=500&format=json&nojsoncallback=1&extras=path_alias,url_l&group_id=" +
                     FlickrGroupId
-var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=" +
-                    FlickrApiKey + "&format=json&nojsoncallback=1&photo_id="
 
 fetch(groupPhotoUrl)
 .then(function(res){
@@ -19,7 +17,6 @@ fetch(groupPhotoUrl)
         imgEl: document.getElementById("photo"),
         titleEl: document.getElementById("photo-title"),
         flickrLinkEl: document.getElementById("photo-flickr"),
-        size: "Large"
     })
 
     var navs = document.querySelectorAll(".photo-nav")
@@ -36,31 +33,8 @@ fetch(groupPhotoUrl)
 var FlickrPhoto = function(raw) {
     this.id = raw.id
     this.title = raw.title
-    this.pathalias = raw.pathalias
-}
-FlickrPhoto.prototype.getSizes = function(){
-    if(!this._sizesPromise) {
-        this._sizesPromise = fetch(photoSizesUrl + this.id)
-            .then(function(res){
-                return res.json()
-            })
-            .then(function(json){
-                return json.sizes.size
-            })
-    }
-    return this._sizesPromise
-}
-FlickrPhoto.prototype.getUrlForSize = function(size) {
-    return this.getSizes()
-        .then(function(sizes) {
-            var sizeObj = sizes.find(function(sizeObj){
-                return sizeObj.label === size
-            })
-            return sizeObj ? sizeObj.source : undefined
-        })
-}
-FlickrPhoto.prototype.getFlickrLink = function() {
-    return "https://www.flickr.com/photos/" + this.pathalias + "/" + this.id
+    this.imageUrl = raw.url_l
+    this.flickrUrl = "https://www.flickr.com/photos/" + raw.pathalias + "/" + raw.id + "/"
 }
 
 
@@ -87,25 +61,17 @@ FlickrStream.prototype.showPhoto = function(){
     var photo = this.photos[this.nb]
     var opts = this.options
     opts.titleEl.innerText = photo.title
-    opts.flickrLinkEl.href = photo.getFlickrLink()
-    photo.getUrlForSize(opts.size)
-        .then(function(url){
-            opts.imgEl.src = url
-        })
+    opts.flickrLinkEl.href = photo.flickrLink
+    opts.imgEl.src = photo.imageUrl
 }
 FlickrStream.prototype.preload = function(){
-    var that = this
-    var preloadImg = function(i){
-        that.photos[that._getNb(i)]
-            .getUrlForSize(that.options.size)
-            .then(function(url){
-                var img = document.createElement('img')
-                img.src = url
-            })
-
+    var preloadImg = function(photo){
+        var url = photo.imageUrl
+        var img = document.createElement('img')
+        img.src = url
     }
-    preloadImg(-1)
-    preloadImg(1)
+    preloadImg(this.photos[this._getNb(-1)])
+    preloadImg(this.photos[this._getNb(1)])
 }
 
 FlickrStream.prototype.navigate = function(incr, preload) {

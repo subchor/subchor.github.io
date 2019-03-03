@@ -5,7 +5,7 @@
 var FlickrApiKey = "088e79ad567fb57b47e31915b2d0c8f9"
 var FlickrGroupId = "4008006@N22"
 var groupPhotoUrl = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=" +
-                    FlickrApiKey + "&per_page=500&format=json&nojsoncallback=1&extras=path_alias,url_l&group_id=" +
+                    FlickrApiKey + "&per_page=100&format=json&nojsoncallback=1&extras=path_alias,url_l&group_id=" +
                     FlickrGroupId
 
 fetch(groupPhotoUrl)

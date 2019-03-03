@@ -4,7 +4,7 @@
 ****/
 var searchByTagUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=088e79ad567fb57b47e31915b2d0c8f9&per_page=500&format=json&nojsoncallback=1&media=photos&tags=subchor"
 var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=088e79ad567fb57b47e31915b2d0c8f9&format=json&nojsoncallback=1&&photo_id="
-var flickrUrl = "https://www.flickr.com/photos/subterrarium/"
+var flickrUrl = "https://www.flickr.com/groups/subchor/"
 
 fetch(searchByTagUrl)
 .then(function(res){

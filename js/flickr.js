@@ -72,7 +72,7 @@ var FlickrStream = function(options) {
     this.photos = options.photos.map(function(p){
         return new FlickrPhoto(p)
     })
-    this.nb = parseInt(localStorage.getItem("subchor.flickrNb")) || 0
+    this.nb = 0
 
     this.navigate(0, false)
 }
@@ -112,12 +112,9 @@ FlickrStream.prototype.preload = function(){
     preloadImg(-1)
     preloadImg(1)
 }
-FlickrStream.prototype.setNb = function(nb) {
-    this.nb = nb
-    localStorage.setItem("subchor.flickrNb", nb)
-}
+
 FlickrStream.prototype.navigate = function(incr, preload) {
-    this.setNb(this._getNb(parseInt(incr)))
+    this.nb = this._getNb(parseInt(incr))
     this.showPhoto()
     if(preload) {
         this.preload()

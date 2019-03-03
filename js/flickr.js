@@ -4,8 +4,11 @@
 ****/
 var FlickrApiKey = "088e79ad567fb57b47e31915b2d0c8f9"
 var FlickrGroupId = "4008006@N22"
-var groupPhotoUrl = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=" + FlickrApiKey + "&per_page=500&format=json&nojsoncallback=1&&group_id=" + FlickrGroupId
-var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=" + FlickrApiKey + "&format=json&nojsoncallback=1&&photo_id="
+var groupPhotoUrl = "https://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=" +
+                    FlickrApiKey + "&per_page=500&format=json&nojsoncallback=1&extras=path_alias&group_id=" +
+                    FlickrGroupId
+var photoSizesUrl = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=" +
+                    FlickrApiKey + "&format=json&nojsoncallback=1&photo_id="
 
 fetch(groupPhotoUrl)
 .then(function(res){
@@ -33,6 +36,7 @@ fetch(groupPhotoUrl)
 var FlickrPhoto = function(raw) {
     this.id = raw.id
     this.title = raw.title
+    this.pathalias = raw.pathalias
 }
 FlickrPhoto.prototype.getSizes = function(){
     if(!this._sizesPromise) {
@@ -56,13 +60,7 @@ FlickrPhoto.prototype.getUrlForSize = function(size) {
         })
 }
 FlickrPhoto.prototype.getFlickrLink = function() {
-    return this.getSizes()
-        .then(function(sizes) {
-            if(sizes.length) {
-                var urlMatch = sizes[0].url.match(/(.*)\/sizes\/.*/)
-                return urlMatch ? urlMatch[1] : undefined
-            }
-        })
+    return "https://www.flickr.com/photos/" + this.pathalias + "/" + this.id
 }
 
 
@@ -89,13 +87,10 @@ FlickrStream.prototype.showPhoto = function(){
     var photo = this.photos[this.nb]
     var opts = this.options
     opts.titleEl.innerText = photo.title
+    opts.flickrLinkEl.href = photo.getFlickrLink()
     photo.getUrlForSize(opts.size)
         .then(function(url){
             opts.imgEl.src = url
-        })
-    photo.getFlickrLink()
-        .then(function(url) {
-            opts.flickrLinkEl.href = url
         })
 }
 FlickrStream.prototype.preload = function(){

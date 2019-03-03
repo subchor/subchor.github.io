@@ -551,10 +551,11 @@ a:active {
     text-align: right;
     padding-right: 5vw;
 }
-#photo-title, #photo-flickr {
+#photo-title, .photo-links {
     color: #e5d3d3;
 }
-a#photo-flickr {
+a.photo-links {
+    z-index: 1;
     display: block;
     margin-top: 10px;
     font-size: 0.7em;

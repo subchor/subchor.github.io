@@ -278,6 +278,8 @@
             var targetId = nav && nav.target && nav.target.id
             if(targetId === 'video') {
                 initYouTube(nav.target)
+            } else if(targetId === 'join') {
+                initYouTube(document.querySelector('#video'))
             } else if(targetId === 'live') {
                 initFacebook()
             }

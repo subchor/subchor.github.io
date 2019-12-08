@@ -61,9 +61,9 @@
     <img src="img/logo-simplified.svg" class="logo" alt="Chor-Logo - ein Tortenspitzendeckchen">
     <h2 class="slogan">We sing, we lubricate</h2>
     <div class="slogan-source">David Hill</div>
-    <div class="horse">
+    <a href="#landing" class="horse">
         <div class="tail"></div>
-    </div>
+    </a>
 </section>
 
 <div class="text-blocks">
@@ -211,15 +211,22 @@
         {text: "Dass wir keine Noten haben, ist eine wilde Lüge!", source: "Alina Sklenicka"},
     ]
 
-    var sloganNb = rand(slogans.length-1)
-    var slogan = slogans[sloganNb]
-    document.querySelector(".slogan")
-        .innerText = slogan.text
-    document.querySelector(".slogan-source")
-        .innerText = slogan.source
+    function randomizeLandingSection() {
+        var sloganNb = rand(slogans.length-1)
+        var slogan = slogans[sloganNb]
+        document.querySelector(".slogan")
+            .innerText = slogan.text
+        document.querySelector(".slogan-source")
+            .innerText = slogan.source
 
-    document.getElementById("landing")
-        .classList.add("bg"+rand(28))  // <--- number of background images available, has to match CSS classes
+        document.getElementById("landing")
+            .classList.add("bg"+rand(28))  // <--- number of background images available, has to match CSS classes
+    }
+
+    randomizeLandingSection()
+
+    document.querySelector('.horse')
+        .addEventListener('click', randomizeLandingSection)
 
     var navLinks = document.querySelectorAll(".top-nav a")
     for(var i = 0; i < navLinks.length; i++) {

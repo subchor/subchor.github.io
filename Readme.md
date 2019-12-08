@@ -33,9 +33,10 @@ e.g.
 
 ### Landing page
 
-**Background images** are stored in `img/bg/`. They are chosen randomly on each page load. For each image there has to be a CSS class `#landing.bg<i>`, where `<i>` is an integer. The code for random image selection is in `index.html` and the number of available images has to be adapted there.
+**Background images** are stored in `img/bg/`. They are chosen randomly on each page load. The script
+in `index.html` contains a list of available images and has to be updated if images are added or removed.
 
-The **quotes** are also randomly selected on each page load. They are defined in `index.html`.
+The **quotes** are also randomly selected on each page load. They are also defined in `index.html`.
 
 ## Contributing
 

@@ -36,6 +36,18 @@ a:active {
     }
 }
 
+/* a11y helpers */
+.visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+
 /*********
  * NAV   *
  *********/
@@ -81,6 +93,14 @@ a:active {
 .top-nav #collapse {
     display: none;
 }
+.top-nav .collapse-dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    margin: 2px;
+    background-color: #fff;
+    transition: width .2s ease-out;
+}
 
 @media (max-width: 960px) {
     .top-nav {
@@ -91,29 +111,38 @@ a:active {
     .top-nav ul {
         display: block;
         width: 960px;
-        background: rgba(0,0,0,0.7);
+        background: rgba(0,0,0,0.9);
         position: absolute;
         top: 0px;
         margin: 0;
         margin-left: 960px;
         z-index: 2;
         position: absolute;
-        transition: margin .2s ease-out;
+        transition: all .2s ease-out;
     }
     .top-nav #collapse {
-        display: block;
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-        line-height: 48px;
-        width: 48px;
-        text-align: center;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-    .top-nav:hover #collapse {
-        border-bottom: 72px solid transparent;
+    .top-nav:hover .collapse-dot, .top-nav:focus-within .collapse-dot {
+        width: 70%;
+        height: 2px;
+        margin: 3px;
     }
-    .top-nav:hover ul {
+    .top-nav:hover ul, .top-nav:focus-within ul{
         margin-left: 48px;
+    }
+    .top-nav:hover ul:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 48px;
+        left: -48px;
+        top: 0;
     }
     .top-nav li {
         display: block;

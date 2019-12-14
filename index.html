@@ -36,8 +36,6 @@
             })
     </script>
 
-    <script src="js/flickr.js"></script>
-    <script src="js/shows.js"></script>
 </head>
 <body>
 
@@ -100,7 +98,8 @@
         <div class="flex-container">
             <div class="text">
                 <h2>Die nächsten Auftritte</h2>
-                <ul class="live-shows" data-live-upcomming></ul>
+                <div id="shows-app"></div>
+                <!--<ul class="live-shows" data-live-upcomming></ul>
                 <div data-live-upcomming-empty style="display:none;">
                     Derzeit sind keine Auftritte geplant.
                     Wenn du eine Idee hast, wo und wie das geändert werden kann -
@@ -109,6 +108,7 @@
 
                 <h3>Zuletzt:</h3>
                 <ul class="live-shows" data-live-past data-live-max="5"></ul>
+            -->
                 Die komplette Historie gibt es in der <a href="archiv.html">Gigografie</a>.
             </div>
 
@@ -193,6 +193,8 @@
     </div>
 </footer>
 
+<script src="js/flickr.js"></script>
+<script src="js/public/shows.js"></script>
 <script type="text/javascript">
 (function(){
     /*****

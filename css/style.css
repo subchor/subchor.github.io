@@ -534,3 +534,52 @@ footer .copyleft {
     display: inline-block;
     transform: scaleX(-1);
 }
+
+
+/*******************
+ * 10Jahre Special *
+ *******************/
+
+ .tenth-aniversary-special {
+     position: absolute;
+     top: 5rem;
+     right: 5rem;
+     transform: rotate(-5deg);
+     transition: transform 0.3s ease-out;
+     --color-star: red;
+ }
+ .tenth-aniversary-special:hover {
+     transform: rotate(-25deg);
+ }
+ .tenth-aniversary-special a {
+     text-decoration: none;
+     font-weight: 600;
+     color: #fff;
+ }
+.star-12 {
+    background: var(--color-star);
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+  .star-12:before,
+  .star-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background: var(--color-star);
+    z-index: -1;
+  }
+  .star-12:before {
+    transform: rotate(30deg);
+  }
+  .star-12:after {
+    transform: rotate(60deg);
+  }

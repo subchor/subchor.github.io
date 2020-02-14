@@ -55,24 +55,29 @@ a:active {
 .top-nav {
     background: rgba(0,0,0,0.7);
     position: fixed;
-    height: 48px;
+    height: 3rem;
     width: 100%;
     padding-left: 50px;
     z-index: 100;
     overflow: hidden;
 }
-.top-nav ul, .top-nav li {
-    display: inline;
-    padding: 0;
+.top-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: stretch;
+    margin: 0;
+    height: 100%;
+}
+.top-nav li {
+    display: flex;
+    align-items: center;
 }
 .top-nav li a {
     color: #ddd;
     text-decoration: none;
-    font-size: 24px;
-    padding: 10px 25px;
-    position: relative;
-    top: 7px;
+    font-size: 1.5rem;
     transition: all 0.3s ease-in;
+    padding: 1rem 2ch;
 }
 .top-nav a.active:not([href="#landing"]) {
     background: rgba(255,255,255,0.4);
@@ -109,16 +114,17 @@ a:active {
         padding: 0;
     }
     .top-nav ul {
-        display: block;
-        width: 960px;
+        width: calc(100vw - 48px);
+        height: auto;
+        flex-direction: column;
         background: rgba(0,0,0,0.9);
         position: absolute;
         top: 0px;
         margin: 0;
-        margin-left: 960px;
+        padding: 0;
         z-index: 2;
-        position: absolute;
-        transition: all .2s ease-out;
+        transform: translateX(100vw);
+        transition: transform .2s ease-out;
     }
     .top-nav #collapse {
         display: flex;
@@ -134,7 +140,7 @@ a:active {
         margin: 3px;
     }
     .top-nav:hover ul, .top-nav:focus-within ul{
-        margin-left: 48px;
+        transform: translateX(48px);
     }
     .top-nav:hover ul:after {
         content: "";

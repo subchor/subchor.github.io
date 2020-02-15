@@ -1,22 +1,57 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <title>10 Jahre subchor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/x.icon" href="/favicon.ico"/>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/x.icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
     <style>
         * {
             box-sizing: border-box;
+            line-height: 2;
+        }
+
+        body {
+            background-image: repeating-linear-gradient(-45deg,
+                    #e50e7e 0 50px,
+                    #f7ea1e 0 100px,
+                    #66b32d 0 150px,
+                    #6ac6d9 0 200px,
+                    #254c9c 0 250px);
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        a, a:visited {
+            color: #254c9c;
+        }
+        a:hover {
+            color: #66b32d;
+            text-decoration-style: wavy;
         }
 
         main {
             max-width: 80ch;
-            margin: 0 auto;
-            padding: 2rem 4ch;
+            margin: 1rem auto;
+        }
+
+        main > * {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 1rem 1rem 0.05rem 0.25rem rgba(0, 0, 0, 0.6);
+            transition: all 0.2s linear;
+            margin: 2rem 0;
+            padding: 2rem 3ch;
+        }
+
+        .flyer {
+            padding: 0;
+            line-height: 0;
         }
 
         img {
@@ -27,65 +62,92 @@
             display: grid;
             grid-template-columns: 10ch auto;
         }
+        @media screen and (max-width: 600px){
 
+            main > * {
+                padding: 2rem 1ch;
+                box-shadow: none;
+            }
+        }
     </style>
 </head>
+
 <body>
     <main>
-        
-    <h1>10 Jahre subchor</h1>
-    <img class="flyer" src="altern-webflyer.jpg" alt="Flyer für die 10-Jahres Feier" />
 
-    <h2>Historie</h2>
-    <p>
-        Wir schreiben das Jahr 2010. An einem frostigen Abend, irgendwann Ende Jänner, Anfang
-        Februar, hat sich eine kleine Schar vermummter Gestalten in einem modrigen Keller in
-        Hernals eingefunden. Sie kauern um eine wuchtige, zum Tisch umfunktionierte defekte
-        Espressomaschine, klammern sich an ihre eisigen Bierflaschen und beratschlagen ihre
-        nächsten Schritte. Die Luft ist noch geschwängert von den Ausdünstungen des letzten
-        hier veranstalteten klandestinen Spektakels, leicht durchsetzt vom erdigen Geruch der
-        aus den Bodenritzen steigenden Schimmelsporen. Im Hintergrund transpiriert der längst
-        zum Abwasserkanal umgewandelte Alserbach durch durch das bröckelnde Mauerwerk; nebenan knarrt
-        ein verstimmter Flügel im kühlen Luftzug und unterbricht von Zeit zu Zeit das Gemurmel
-        der verschwörerischen Gruppe. Wie könnten die Ziele zu erreichen sein? Wie wäre das
-        Netzwerk weiter auszuspannen? Wie würde man die Umgebung weiter infiltrieren? Wie die
-        eigenen Überzeugungen verbreiten und althergebrachten Mentalitäten erschüttern? Da, in
-        die Stille einer allgemeinen, ratlosen Nachdenkpause hinein richtet sich aus dem Zirkel
-        eine zierliche Gestalt auf. Gleich einer Fanfare verkündet sie mit heller Stimme die
-        Botschaft: "Lasset uns einen Chor gründen!"
-    </p>
-    <p>
-        Wieder erhebt sich unruhiges Geraune, und nach kurzer Zeit – wohl auch gedrängt durch die
-        eisige Kälte im Gewölbe – macht sich allgemeine Zustimmung breit. Das Mittel zur
-        Welteroberung scheint gefunden.
-    </p>
-    <p>
-        Längst ist der verschwörerische Zirkel zerfallen und in alle Winde zerstreut. Nichteinmal
-        das ominöse Kellergewölbe konnte dem Zahn der Zeit trotzen. Jedoch, die Idee überlebte,
-        manifestierte sich und gedieh. Und nun, nur 10 Jahre später, seid auch ihr bereits in den
-        Fängen des Subchors. Wie die Ratten folgt ihr dem Ruf und erscheint, hypnotisiert von
-        spannter Vorerwartung auf vielstimmige Sirenengesänge, am <strong>22.2.2020</strong> im anrüchigen Celeste!
-    </p>
+        <h1>10 Jahre subchor</h1>
+        <div class="flyer">
+            <img class="flyer" src="altern-webflyer.jpg" alt="Flyer für die 10-Jahres Feier" />
+        </div>
 
-    <h2>Ort</h2>
-    <p>
-        Das <strong>Celeste</strong> befindet sich in der Hamburgerstraße 18 im 5. Wiener Gemeindebezirk.<br>
-        <a href="http://www.celeste.co.at/">Webseite</a>,
-        <a href="https://www.wien.gv.at/Stadtplan/grafik.aspx?lang=de-AT&bookmark=v4FVRqv5EkbuNH1ErUERRO5Rphlnqnnkur2pH4Oprw-b-b&bmadr=10065412">Karte</a>
-    </p>
+        <div>
+            <h2>Historie</h2>
+            <p>
+                Wir schreiben das Jahr 2010. An einem frostigen Abend, irgendwann Ende Jänner, Anfang
+                Februar, hat sich eine kleine Schar vermummter Gestalten in einem modrigen Keller in
+                Hernals eingefunden. Sie kauern um eine wuchtige, zum Tisch umfunktionierte defekte
+                Espressomaschine, klammern sich an ihre eisigen Bierflaschen und beratschlagen ihre
+                nächsten Schritte. Die Luft ist noch geschwängert von den Ausdünstungen des letzten
+                hier veranstalteten klandestinen Spektakels, leicht durchsetzt vom erdigen Geruch der
+                aus den Bodenritzen steigenden Schimmelsporen. Im Hintergrund transpiriert der längst
+                zum Abwasserkanal umgewandelte Alserbach durch durch das bröckelnde Mauerwerk; nebenan knarrt
+                ein verstimmter Flügel im kühlen Luftzug und unterbricht von Zeit zu Zeit das Gemurmel
+                der verschwörerischen Gruppe. Wie könnten die Ziele zu erreichen sein? Wie wäre das
+                Netzwerk weiter auszuspannen? Wie würde man die Umgebung weiter infiltrieren? Wie die
+                eigenen Überzeugungen verbreiten und althergebrachten Mentalitäten erschüttern? Da, in
+                die Stille einer allgemeinen, ratlosen Nachdenkpause hinein richtet sich aus dem Zirkel
+                eine zierliche Gestalt auf. Gleich einer Fanfare verkündet sie mit heller Stimme die
+                Botschaft: "Lasset uns einen Chor gründen!"
+            </p>
+            <p>
+                Wieder erhebt sich unruhiges Geraune, und nach kurzer Zeit – wohl auch gedrängt durch die
+                eisige Kälte im Gewölbe – macht sich allgemeine Zustimmung breit. Das Mittel zur
+                Welteroberung scheint gefunden.
+            </p>
+            <p>
+                Längst ist der verschwörerische Zirkel zerfallen und in alle Winde zerstreut. Nichteinmal
+                das ominöse Kellergewölbe konnte dem Zahn der Zeit trotzen. Jedoch, die Idee überlebte,
+                manifestierte sich und gedieh. Und nun, nur 10 Jahre später, seid auch ihr bereits in den
+                Fängen des Subchors. Wie die Ratten folgt ihr dem Ruf und erscheint, hypnotisiert von
+                spannter Vorerwartung auf vielstimmige Sirenengesänge, am <strong>22.2.2020</strong> im anrüchigen
+                Celeste!
+            </p>
+        </div>
 
+        <div>
+            <h2>Ort</h2>
+            <p>
+                Das <strong>Celeste</strong> befindet sich in der Hamburgerstraße 18 im 5. Wiener Gemeindebezirk.<br>
+                <a href="http://www.celeste.co.at/">Webseite</a>,
+                <a
+                    href="https://www.wien.gv.at/Stadtplan/grafik.aspx?lang=de-AT&bookmark=v4FVRqv5EkbuNH1ErUERRO5Rphlnqnnkur2pH4Oprw-b-b&bmadr=10065412">Karte</a>
+            </p>
+        </div>
 
-    <h2>Programm</h2>
-    <dl>
-        <dt>21h</dt> <dd>Dj Wriggle</dd>
-        <dt>22h</dt> <dd>Subchor - Set Ⅰ</dd>
-        <dt>22.30h</dt> <dd>Klirren goes Subchor</dd>
-        <dt>23.30h</dt> <dd>Subchor - Set Ⅱ</dd>
-        <dt>0h</dt> <dd>Frau Die</dd>
-        <dt>1h</dt> <dd><a href="https://www.facebook.com/Eklextasy/">Eklextasy</a></dd>
-        <dt>3h</dt> <dd>Cim</dd>
-    </dl>
-    <a href="/">Zur Startseite</a>
-</main>
+        <div>
+            <h2>Programm</h2>
+            <dl>
+                <dt>21h</dt>
+                <dd><a href="https://www.facebook.com/djwriggle/">Dj Wriggle</a></dd>
+                <dt>22h</dt>
+                <dd>Subchor - Set Ⅰ</dd>
+                <dt>22.30h</dt>
+                <dd>Klirren goes Subchor</dd>
+                <dt>23.30h</dt>
+                <dd>Subchor - Set Ⅱ</dd>
+                <dt>0h</dt>
+                <dd>Frau Die</dd>
+                <dt>1h</dt>
+                <dd><a href="https://www.facebook.com/Eklextasy/">Eklextasy</a></dd>
+                <dt>3h</dt>
+                <dd>Cim</dd>
+            </dl>
+        </div>
+        <div>
+
+            <a href="/">Zur Startseite</a>
+        </div>
+    </main>
 </body>
+
 </html>

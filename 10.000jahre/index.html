@@ -37,7 +37,7 @@
         }
 
         main {
-            max-width: 80ch;
+            max-width: 70ch;
             margin: 1rem auto;
         }
 
@@ -63,16 +63,19 @@
             display: block;
             margin: 0 auto;
         }
-
+        
         dl {
             display: grid;
             grid-template-columns: 10ch auto;
         }
-        @media screen and (max-width: 600px){
 
-            main > * {
+        @media screen and (max-width: 75ch) {
+            .box {
                 padding: 2rem 1ch;
                 box-shadow: none;
+            }
+            .flyer {
+                padding: 0;
             }
         }
     </style>

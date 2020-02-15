@@ -546,7 +546,6 @@ footer .copyleft {
      right: 5rem;
      transform: rotate(-5deg);
      transition: transform 0.3s ease-out;
-     --color-star: red;
  }
  .tenth-aniversary-special:hover {
      transform: rotate(-25deg);
@@ -555,9 +554,11 @@ footer .copyleft {
      text-decoration: none;
      font-weight: 600;
      color: #fff;
+     background-color: #e50e7e;
+     transform: rotate(10deg);
  }
 .star-12 {
-    background: var(--color-star);
+    background-color: #254c9c;
     width: 80px;
     height: 80px;
     position: relative;
@@ -574,12 +575,21 @@ footer .copyleft {
     left: 0;
     height: 80px;
     width: 80px;
-    background: var(--color-star);
     z-index: -1;
-  }
-  .star-12:before {
+    transition: transform 0.3s ease-out;
+}
+.star-12:before {
+    background-color: #66b32d;
     transform: rotate(30deg);
   }
   .star-12:after {
+    background-color: #f7ea1e;
     transform: rotate(60deg);
   }
+  .tenth-aniversary-special:hover .star-12:before {
+    transform: rotate(45deg);
+  }
+  .tenth-aniversary-special:hover .star-12:after {
+    transform: rotate(35deg);
+  }
+

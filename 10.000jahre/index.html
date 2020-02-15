@@ -41,7 +41,7 @@
             margin: 1rem auto;
         }
 
-        main > * {
+        .box {
             background-color: rgba(255, 255, 255, 0.97);
             box-shadow: 1rem 1rem 0.05rem 0.25rem rgba(0, 0, 0, 0.5);
             transition: all 0.2s linear;
@@ -56,6 +56,12 @@
 
         img {
             width: 100%;
+        }
+
+        .sticker {
+            width: 33%;
+            display: block;
+            margin: 0 auto;
         }
 
         dl {
@@ -75,11 +81,11 @@
 <body>
     <main>
 
-        <h1 class="flyer">
+        <h1 class="box flyer">
             <img class="flyer" src="altern-webflyer.jpg" alt="In Würde altern: 10 Jahre Subchor, 22.02.2020, 21:00 Celeste" />
         </h1>
 
-        <div>
+        <div class="box">
             <h2>Historie</h2>
             <p>
                 Wir schreiben das Jahr 2010. An einem frostigen Abend, irgendwann Ende Jänner, Anfang
@@ -113,7 +119,9 @@
             </p>
         </div>
 
-        <div>
+        <img class="sticker" loading="lazy" src="sticker_siegel.png" alt="Siegel mit Inschrift 'Subchor'"/>
+
+        <div class="box">
             <h2>Ort</h2>
             <p>
                 Das <strong>Celeste</strong> befindet sich in der Hamburgerstraße 18 im 5. Wiener Gemeindebezirk.<br>
@@ -123,7 +131,10 @@
             </p>
         </div>
 
-        <div>
+        <img class="sticker" loading="lazy" src="sticker_atom.png"
+            alt="Ein gelber Kreis mit roter Tortenspitze. Text außen: 'Atomchor? Nein Danke'. Text in der Tortenspitze: 'Subchor'"/>
+
+        <div class="box">
             <h2>Programm</h2>
             <dl>
                 <dt>21h</dt>
@@ -142,10 +153,14 @@
                 <dd>Cim</dd>
             </dl>
         </div>
-        <div>
-
+        <img class="sticker" loading="lazy" src="sticker_altern.png"
+            alt="Bild mit dem Skelett eines Pferdes. Text: 'In Würde altern: 10 Jahre Subchor'"/>
+        <div class="box">
             <a href="/">Zur Startseite</a>
         </div>
+
+        <img class="sticker" loading="lazy" src="sticker_tot.png"
+            alt="Sternenhimmel mit Pferd dessen Schweif in einen Regenbogen übergeht. Text: 'Das Subterrarium ist tot - es lebe der Subchor'"/>
     </main>
 </body>
 

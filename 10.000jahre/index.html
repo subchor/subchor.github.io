@@ -47,13 +47,11 @@
         .box {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(4px);
-            box-shadow: 1rem 1rem 0.05rem 0.25rem rgba(0, 0, 0, 0.5);
-            transition: all 0.2s linear;
             margin: 2rem 0;
-            padding: 2rem 3ch;
+            padding: 2rem 1ch;
         }
 
-        .flyer {
+        .box.flyer {
             padding: 0;
             line-height: 0;
         }
@@ -73,13 +71,13 @@
             grid-template-columns: 10ch auto;
         }
 
-        @media screen and (max-width: 75ch) {
-            .box {
-                padding: 2rem 1ch;
-                box-shadow: none;
+        @media screen and (min-width: 80ch) {
+            body {
+                background-attachment: fixed;
             }
-            .flyer {
-                padding: 0;
+            .box {
+                padding: 2rem 3ch;
+                box-shadow: 1rem 1rem 0.05rem 0.25rem rgba(0, 0, 0, 0.5);
             }
         }
     </style>

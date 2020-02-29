@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/x.icon" href="/favicon.ico" />
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/x.icon" href="/favicon.ico" >
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" >
     <style>
         html {
             box-sizing: border-box;
@@ -44,6 +44,11 @@
             margin: 1rem auto;
         }
 
+        picture {
+            display: block;
+            margin: 1.5rem 0;
+        }
+
         .box {
             background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(4px);
@@ -54,6 +59,15 @@
         .box.flyer {
             padding: 0;
             line-height: 0;
+        }
+
+        .box.fotos {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .box.fotos p, .box.fotos h2 {
+            padding-left: 1ch;
+            padding-right: 1ch;
         }
 
         img {
@@ -87,7 +101,7 @@
     <main>
 
         <h1 class="box flyer">
-            <img class="flyer" src="altern-webflyer.jpg" alt="In Würde altern: 10 Jahre Subchor, 22.02.2020, 21:00 Celeste" />
+            <img class="flyer" src="altern-webflyer.jpg" alt="In Würde altern: 10 Jahre Subchor, 22.02.2020, 21:00 Celeste" >
         </h1>
 
         <div class="box">
@@ -124,7 +138,31 @@
             </p>
         </div>
 
-        <img class="sticker" loading="lazy" src="sticker_siegel.png" alt="Siegel mit Inschrift 'Subchor'"/>
+        <img class="sticker" loading="lazy" src="sticker_siegel.png" alt="Siegel mit Inschrift 'Subchor'">
+        
+        <div class="box fotos">
+            <h2>Fotos</h2>
+            <picture>
+                <source type="image/webp" srcset="fotos/49575776882_640.webp">
+                <img src="fotos/49575776882_640.jpg" loading="lazy" alt="Chor auf der Bühne unter Discokugel">
+            </picture>
+            <picture>
+                <source type="image/webp" srcset="fotos/49575724916_640.webp">
+                <img src="fotos/49575724916_640.jpg" loading="lazy" alt="Der Chor singt Choro dei Pompieri">
+            </picture>
+            <picture>
+                <source type="image/webp" srcset="fotos/49575780377_640.webp">
+                <img src="fotos/49575780377_640.jpg" loading="lazy" alt="Der Geburtstagskuchen">
+            </picture>
+            <p>
+                <a href="https://www.flickr.com/photos/subchor/albums/72157713236965938">
+                    Alle Fotos vom Geburtstagsfest auf Flickr ansehen
+                </a>
+            </p>
+        </div>
+
+        <img class="sticker" loading="lazy" src="sticker_altern.png"
+            alt="Bild mit dem Skelett eines Pferdes. Text: 'In Würde altern: 10 Jahre Subchor'">
 
         <div class="box">
             <h2>Ort</h2>
@@ -137,7 +175,7 @@
         </div>
 
         <img class="sticker" loading="lazy" src="sticker_atom.png"
-            alt="Ein gelber Kreis mit roter Tortenspitze. Text außen: 'Atomchor? Nein Danke'. Text in der Tortenspitze: 'Subchor'"/>
+            alt="Ein gelber Kreis mit roter Tortenspitze. Text außen: 'Atomchor? Nein Danke'. Text in der Tortenspitze: 'Subchor'">
 
         <div class="box">
             <h2>Programm</h2>
@@ -158,14 +196,13 @@
                 <dd>Cim</dd>
             </dl>
         </div>
-        <img class="sticker" loading="lazy" src="sticker_altern.png"
-            alt="Bild mit dem Skelett eines Pferdes. Text: 'In Würde altern: 10 Jahre Subchor'"/>
-        <div class="box">
-            <a href="/">Zur Startseite</a>
-        </div>
 
         <img class="sticker" loading="lazy" src="sticker_tot.png"
-            alt="Sternenhimmel mit Pferd dessen Schweif in einen Regenbogen übergeht. Text: 'Das Subterrarium ist tot - es lebe der Subchor'"/>
+            alt="Sternenhimmel mit Pferd dessen Schweif in einen Regenbogen übergeht. Text: 'Das Subterrarium ist tot - es lebe der Subchor'">
+        
+            <div class="box">
+            <a href="/">Zur Startseite</a>
+        </div>
     </main>
 </body>
 

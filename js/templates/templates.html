@@ -2,18 +2,19 @@
 {{~it.shows :show:index }}
     <li class="live-show">
         {{? show.flyer }}
-            <a href="{{=show.flyer}}" target="_blank" rel="noopener" class="live-show-flyer" style="background-image: url({{=show.flyer}});">
-                <div class="live-show-title">{{=show.title}}</div>
+            <a href="{{=show.flyer}}" class="live-show__flyer">
+                <img class="live-show__img" src="{{=show.flyer}}" loading="lazy">
+                <h4 class="live-show__title">{{=show.title}}</h4>
             </a>
         {{??}}
-            <div class="live-show-title">{{=show.title}}</div>
+            <h4 class="live-show__title">{{=show.title}}</h4>
         {{?}}
-        <div class="live-show-date-location">
+        <div class="live-show__date-location">
             {{=show.dateFriendly}}{{? show.time }} ab {{=show.time}}{{?}},
             {{=show.location}}
         </div>
         {{? show.description }}
-        <div class="live-show-description">{{=show.description}}</div>
+        <div class="live-show__description">{{=show.description}}</div>
         {{?}}
         {{? show.link }}
             <a href="{{=show.link}}" target="_blank" rel="noopener">

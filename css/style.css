@@ -358,34 +358,37 @@ a:active {
 .live-show > * {
     padding-left: 10px;
 }
-.live-show-flyer {
+.live-show__flyer {
     display: block;
     padding: 0;
     height: 150px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
 }
-.live-show-flyer .live-show-title {
+.live-show__img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+.live-show__flyer .live-show__title {
     color: #000;
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 10px 10px 5px;
     background:rgba(217,255,103,0) 50%;
-    background: linear-gradient(to bottom, rgba(217,255,103,0) 0%, rgba(217,255,103,0.8) 30%, rgba(217,255,103,1) 100%);
+    background: linear-gradient(to bottom, rgba(229, 255, 149,0) 0%, rgba(229, 255, 149,0.8) 30%, rgba(229, 255, 149,1) 100%);
 }
-.live-show-title {
+.live-show__title {
     font-size: 1.1em;
     font-weight: bold;
     padding-top: 10px;
+    margin: 0;
 }
-.live-show-date-location {
+.live-show__date-location {
     font-size: 0.9em;
     font-variant: small-caps;
 }
-.live-show-description {
+.live-show__description {
     padding: 10px;
 }
 

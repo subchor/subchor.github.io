@@ -1,5 +1,23 @@
 [
-     {
+  {
+    "date": "2021-10-12",
+    "time": "18:00",
+    "title": "Eröffnung SOHO in Ottakring 2021",
+    "location": "SOHO STUDIOS, Liebknechtgasse 32, 1160 Wien",
+    "description": "Musikalische Umfransung der Ausstellungseröffnung 'Wie ist das mit dem guten Leben?'",
+    "flyer": "img/flyer/2021-10-12-soho.jpg",
+    "link": "https://www.sohoinottakring.at/ausstellung2021/"
+  },
+  {
+    "date": "2021-09-10",
+    "time": "18:30",
+    "title": "1. SPÄTSOMMERFEST am Mexikoplatz",
+    "location": "Mexikoplatz, 1020 Wien",
+    "description": "Bunt und vielseitig, wie das Stuwerviertel selbst. Für das erste Spätsommerfest am berühmt-berüchtigten Mexikoplatz haben wir ein buntes Programm für alle Geschmäcker vorbereitet.",
+    "flyer": "img/flyer/2021-09-15-mexikoplatz.jpg",
+    "link": "https://www.facebook.com/events/229586082384817/"
+  },
+  {
     "date": "2020-08-15",
     "time": "18:30",
     "title": "Gürtelfrische West",
@@ -7,8 +25,8 @@
     "description": "Der Subchor singt im Rahmen der Gürtelfrische West",
     "flyer": "img/flyer/2020-08-15-guertelfrische.jpg",
     "link": "https://www.guertelfrische-west.at/programm/chorkonzert-mit-subchor"
-    },
-     {
+  },
+  {
     "date": "2020-03-6",
     "time": "19:00",
     "title": "W*HOLE AGAIN",
@@ -16,8 +34,8 @@
     "description": "Der Subchor ist Teil der Eröffnungsperformance W*HOLE AGAIN im Rahmen der Wieder-Eröffnung des Künstlerhauses.",
     "flyer": "img/flyer/2020_03_06k-haus.jpg",
     "link": "https://www.k-haus.at/de/kuenstlerhaus/aktuell/ausstellung/375/alles-war-klar.html"
-    },
-    {
+  },
+  {
     "date": "2020-02-22",
     "time": "21:00",
     "title": "10 Jahre Subchor",
@@ -25,8 +43,8 @@
     "description": "A C H T U N G ! /// Haltet eure Terminkalender fest! Der Subchor wird 10 und feiert fett am 22.2.2020 im Celeste. /// Programm: 21h Dj Wriggle / 22h Subchor I / 22.30 Klirren goes Subchor / 23.30 Subchor II / 0h Frau Die / 1h Eklextasy / 3h Cim",
     "flyer": "/img/flyer/2020_02_22celeste.jpg",
     "link": "https://subchor.at/10.000jahre/"
-    },
-    {
+  },
+  {
     "date": "2019-12-07",
     "time": "19:30",
     "title": "3. SubNobelChorDoppelKonzert",

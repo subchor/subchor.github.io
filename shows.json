@@ -1,11 +1,38 @@
 [  
   {
+    "date": "2023-02-24",
+    "time": "20:00",
+    "title": "Subchor wird 13",
+    "location": "Celeste, Hamburgerstraße 18, 1050 Wien",
+    "description": "Der Subchor ist jetzt ein Teen und feiert am 24.2.2023 im Celeste. /// Programm: 20h Eklextasy / 21h Subchor / 21.30 Eklextasy bis 23h",
+    "flyer": "img/flyer/2023-02-24-subchor-wird-13.jpg",
+    "link": "https://www.facebook.com/events/1330459014411232"
+  },
+  {
+    "date": "2022-07-08",
+    "time": "18:15",
+    "title": "Rhizomatic: Octopussys Garden Resort",
+    "location": "Wild im West, Mariahilfer Straße 166, 1150 Wien",
+    "description": "Das Octopussys Garden Resort zelebriert Trash auf höchstem Niveau, planscht im seichten Gewässer und taucht auch mal ab in die Untiefen des kollektiven Unbewussten.",
+    "flyer": "img/flyer/2022-07-08-rhizomatic-wild-im-west.jpg",
+    "link": "https://rhizomatic.at/archiv/octopussys-garden-resort/"
+  },
+  {
+    "date": "2022-06-30",
+    "time": "21:00",
+    "title": "Mariengassen-Sommer-Straßenfest - shizzle",
+    "location": "Kulturcafé Max, Mariengasse, 1170 Wien",
+    "description": "Zum zweiten Mal initiiert das Hernalser Shizzle das Mariengassensommerfest. Unser diesjähriges Grätzlfest macht sich jeweils ab Mittag einen Lenz.",
+    "flyer": "img/flyer/2022-06-30-cafe-max-shizzle.png",
+    "link": "https://shizzle-kultur.at/events/mariengassen-sommer-strassenfest/"
+  },
+  {
     "date": "2022-03-15",
     "time": "18:00",
     "title": "Alpine Dweller at Radiokulturhaus",
     "location": "RKH, Argentinierstraße, 1040 Wien",
     "description": "Das Wiener Indie-Folk Trio hat bei ihrem Auftritt kräftige Rückenstärkung den Subchor und Chor X.",
-    "flyer": "img/flyer/2021-10-12-soho.jpg",
+    "flyer": "img/flyer/2022-03-15-radiokulturhaus-alpine-dweller.jpg",
     "link": "https://www.isorauschen.at/alpine-dweller-at-radiokulturhaus-160322"
   },
   {

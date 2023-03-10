@@ -12,56 +12,34 @@
 (function(){
     var compiledTemplates = {
         'showlist': function anonymous(it) {
-            var out='';var arr1=it.shows;if(arr1){var show,index=-1,l1=arr1.length-1;while(index<l1){show=arr1[index+=1];out+=' <li class="live-show"> ';if(show.flyer){out+=' <a href="'+(show.flyer)+'" class="live-show__flyer"> <img class="live-show__img" src="'+(show.flyer)+'" loading="lazy"> <h4 class="live-show__title">'+(show.title)+'</h4> </a> ';}else{out+=' <h4 class="live-show__title">'+(show.title)+'</h4> ';}out+=' <div class="live-show__date-location"> '+(show.dateFriendly);if(show.time){out+=' ab '+(show.time);}out+=', '+(show.location)+' </div> ';if(show.description){out+=' <div class="live-show__description">'+(show.description)+'</div> ';}out+=' ';if(show.link){out+=' <a href="'+(show.link)+'" target="_blank" rel="noopener"> ';if(show.linkIsFacebook){out+='Facebook Event';}else{out+='Website';}out+=' </a> ';}out+=' </li>';} } return out;
+            return it.shows.map(show => `
+    <li class="live-show">
+        ${show.flyer
+            ? `<a href="${ show.flyer}" class="live-show__flyer">
+                    <img class="live-show__img" src="${ show.flyer}" loading="lazy">
+                    <h4 class="live-show__title">${ show.title }</h4>
+                </a>`
+            : `<h4 class="live-show__title">${ show.title }</h4>`
+        }
+            <div class="live-show__date-location">
+                ${ show.dateFriendly }
+                ${ show.time && `ab ${ show.time}` },
+                ${ show.location }
+            </div>
+            ${ show.description && `<div class="live-show__description">${ show.description }</div>`}
+            ${ show.link && `
+                <a href="${ show.link }" target="_blank" rel="noopener">
+                    ${ show.linkIsFacebook ? 'Facebook Event' : 'Website' }
+                </a>
+            `}
+    </li>`).join('')
         },
         'next-gig': function anonymous(it) {
-            var out=' Nächster Auftritt: '+(it.show.title)+', '+(it.show.dateFriendly);return out;
+            return ` Nächster Auftritt: ${it.show.title}, ${it.show.dateFriendly}`
         }
-    }
-    // load doT engine and templates
-    var templateHolder = function() {
-        return new Promise(function(resolve, reject){
-            var script = document.createElement('script')
-            script.onload = function () {
-                return fetch("js/templates/templates.html")
-                .then(function(response){
-                    return response.text()
-                })
-                .then(function(tmpl){
-                    var div = document.createElement("div")
-                    div.innerHTML = tmpl
-                    resolve(div)
-                })
-                .catch(reject)
-            };
-            script.src = "js/vendor/doT.min.js"
-            document.head.appendChild(script)
-        })
     }
     var getTemplate = function(name){
-        var isProduction = location.hostname === 'subchor.at'
-        if(isProduction && name in compiledTemplates) {
-            // use compiled render functions in production
-            return Promise.resolve(compiledTemplates[name])
-        } else {
-            // in development load template, compile and test if it equals pre-compiled version
-            return templateHolder().then(function(div){
-                    var tmplDOM = div.querySelector("#"+name)
-                    var compiled = doT.template(tmplDOM.innerHTML)
-                    var asString = compiled.toString()
-                    var trimF = function(str) {
-                        return str.replace(/\r?\n|\r/g, '').replace(/\s/g,'').replace(/\\/g,'')
-                    }
-                    if(!(name in compiledTemplates) || trimF(compiledTemplates[name].toString()) !== trimF(asString)) {
-                        console.warn("Compiled function for template '" + name + "' needs update:", asString)
-                        if(!isProduction) {
-                            window.alert('Update template function: ' + name)
-                        }
-                    }
-                    return compiled
-                })
-
-        }
+        return compiledTemplates[name]
     }
 
     // load JSON with show data
@@ -98,20 +76,16 @@
         // render upcomming shows
         if(upcommingShows.length) {
             upcommingShows.reverse()
-            getTemplate("showlist")
-            .then(function(tmpl){
-                var upcommingEl = document.querySelector("[data-live-upcomming]")
-                upcommingEl.innerHTML = tmpl({shows: upcommingShows})
-                initLightbox()
-                refreshGumshoe()
-            })
+            var tmpl = getTemplate("showlist")
+            var upcommingEl = document.querySelector("[data-live-upcomming]")
+            upcommingEl.innerHTML = tmpl({shows: upcommingShows})
+            initLightbox()
+            refreshGumshoe()
 
             var nextGigEl = document.querySelector("[data-live-next-link]")
             if(nextGigEl) {
-                getTemplate("next-gig")
-                .then(function(tmpl){
-                    nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
-                })
+                var tmpl = getTemplate("next-gig")
+                nextGigEl.innerHTML = tmpl({show: upcommingShows[0]})
             }
 
         } else {
@@ -122,12 +96,10 @@
         }
 
         // render past shows
-        getTemplate("showlist")
-        .then(function(tmpl){
-            pastEl.innerHTML = tmpl({shows: pastShows})
-            initLightbox()
-            refreshGumshoe()
-        })
+        var tmpl = getTemplate("showlist")
+        pastEl.innerHTML = tmpl({shows: pastShows})
+        initLightbox()
+        refreshGumshoe()
     })
 
     // helper for date formatting

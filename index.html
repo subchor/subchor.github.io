@@ -64,8 +64,16 @@
 <section id="landing" class="section-landing">
     <a href="#live" class="next-gig" data-live-next-link></a>
     <img src="img/logo-simplified.svg" class="logo" alt="Chor-Logo - ein Tortenspitzendeckchen">
-    <h2 class="slogan">We sing, we lubricate</h2>
-    <div class="slogan-source">David Hill</div>
+    <!-- <h2 class="slogan">We sing, we lubricate</h2> -->
+    <div class="slogan">
+      <h2>Subchor sucht Chorleitung</h2>
+      <h3>Wir suchen ab sofort eine Chorleitung für unseren Chor.
+Wir singen Stücke, die meistens von Chormitgliedern arrangiert werden, wir sind aber auch offen für Neues.
+Entscheidungen werden von allen gemeinsam getroffen.
+Proben sind Donnerstag Abend im 17. Bezirk Nähe Yppenplatz.
+Wir bezahlen! (Kontakt: <span class="chormail"></span>)</h3>
+    </div>
+    <!-- <div class="slogan-source">David Hill</div> -->
     <a href="#landing" class="horse">
         <div class="tail"></div>
     </a>
@@ -254,11 +262,11 @@
     ]
 
     function randomizeLandingSection() {
-        var slogan = slogans[rand(slogans.length-1)]
+/*        var slogan = slogans[rand(slogans.length-1)]
         document.querySelector(".slogan")
             .innerText = slogan.text
         document.querySelector(".slogan-source")
-            .innerText = slogan.source
+            .innerText = slogan.source*/
 
         var bgImage = bgImages[rand(bgImages.length - 1)]
         document.querySelector(".section-landing")

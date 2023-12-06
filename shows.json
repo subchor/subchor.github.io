@@ -1,11 +1,45 @@
 [  
   {
+    "date": "2024-02-16",
+    "time": "18:00",
+    "title": "Subchor wird 14",
+    "location": "FLUCC, 1020 Wien",
+    "description": "Der subchor ist jetzt eine Teenage-Dirtbag und deshalb feiert er sich selbt im FLUCC.",
+    "link": "https://www.facebook.com/subchor"
+  },
+  {
+    "date": "2023-12-15",
+    "time": "19:00",
+    "title": "Opening Night Wintermarkt im Studio Walls",
+    "location": "Atelier Studio Walls in der Löhrgasse 9, 1150 Wien",
+    "description": "Live Concert: Experience the enchanting melodies that will set the perfect tone for a magical evening!",
+    "flyer": "img/flyer/2023-12-15_wintermarkt_studio_walls.jpg",
+    "link": "https://esel.at/termin/121800/studio-walls-kunst-winter-markt"
+  },
+  {
+    "date": "2023-11-03",
+    "time": "19:40",
+    "title": "Premiere \"Bühnenbeschimpfung\"",
+    "location": "Schauspielhaus, Porzellangasse 19, 1090 Wien",
+    "description": "Liebe ich es nicht mehr oder liebe ich es zu sehr?.",
+    "flyer": "img/flyer/2023-11-03_schauspielhaus_buehnenbeschimpfung.jpg",
+    "link": "https://www.schauspielhaus.at/veranstaltung/buehnenbeschimpfung"
+  },
+  {
     "date": "2023-10-21",
     "time": "20:00",
     "title": "subchor & Junge Tafelrunde (Basel)",
     "location": "Kulturcafé Henriette, Staudingergasse 10, 1200 Wien",
     "description": "More Chor!!\nWas gibt es besseres als 1 Chor? 2 Chöre!\nDer subchor bekommt Besuch aus der Schweiz - von der jungen tafelrunde aus Basel!\nDas feiern wir mit einem Doppelkonzert: 90s Trash meets Schweizer Folk!",
     "link": "https://www.facebook.com/events/1069098927579664/"
+  },
+  {
+    "date": "2023-10-21",
+    "time": "16:00",
+    "title": "Tag des Offenen^Hauses",
+    "location": "Schauspielhaus, Porzellangasse 19, 1090 Wien",
+    "description": "Vor der Premiere lädt das Schauspielhaus zum Entdecken, Zuschauen und Mitmachen.",
+    "link": "https://www.schauspielhaus.at/programm/programm_detail?produktion_id=1694458292591"
   },
   {
     "date": "2023-06-30",

@@ -1,7 +1,7 @@
 [  
   {
     "date": "2024-03-16",
-    "time": "00:00",
+    "time": "18:00",
     "title": "Vienna Roller Derby",
     "location": "Theodor Kramer Halle, Theodor-Kramer-Straße 3, 1220 Wien"
   },
@@ -11,6 +11,7 @@
     "title": "Subchor wird 14",
     "location": "FLUCC, Praterstern 5, 1020 Wien",
     "description": "Der subchor ist jetzt eine Teenage-Dirtbag und deshalb feiert er sich selbt im FLUCC.",
+    "flyer": "img/flyer/2024-02-16_subchor_wird_14.jpg",
     "link": "https://www.facebook.com/events/690492306616005"
   },
   {

@@ -69,6 +69,7 @@
     <a href="#landing" class="horse">
         <div class="tail"></div>
     </a>
+    <div class="bg-image-text">credit</div>
 </section>
 
 <div class="text-blocks">
@@ -238,7 +239,9 @@
 
         var bgImage = bgImages[rand(bgImages.length - 1)]
         document.querySelector(".section-landing")
-            .style.backgroundImage = 'url(' + bgImage + ')'
+            .style.backgroundImage = 'url(' + bgImage.image + ')'
+        document.querySelector(".bg-image-text")
+            .innerText = bgImage.date + ', ' + bgImage.event + ', ©: ' + bgImage.credit
     }
 
     randomizeLandingSection()

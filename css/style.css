@@ -187,7 +187,7 @@ a:active {
     background-position: center center;
     text-align: center;
     position: relative;
-    background-image: url(../img/bg/E0A1233.jpg);
+    background-image: url(../img/bg/2015-05-08_Brut_credit_Rania_Moslam_02.jpg);
 }
 
 .next-gig {
@@ -281,6 +281,18 @@ a:active {
     .section-landing .slogan {
         max-width: 90%;
     }
+}
+
+.section-landing .bg-image-text {
+  position: absolute;
+  margin-bottom: 0px;
+  bottom: -1px;
+  right: 0px;
+  color: #BABABA;
+  background: rgba(0,0,0, 0.6);
+  font-size: small;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 

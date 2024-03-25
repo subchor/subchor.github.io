@@ -13,7 +13,6 @@ body {
 
 section {
     min-height: 100vh;
-    border-bottom: 1px solid transparent;
     padding-top: 3em;
 }
 
@@ -286,8 +285,9 @@ a:active {
 .section-landing .bg-image-text {
   position: absolute;
   margin-bottom: 0px;
-  bottom: -1px;
+  bottom: 0px;
   right: 0px;
+  border-radius: 7px 0px 0px 0px;
   color: #BABABA;
   background: rgba(0,0,0, 0.7);
   font-size: small;

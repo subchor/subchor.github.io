@@ -190,7 +190,6 @@ a:active {
 }
 
 .next-gig {
-    background: rgba(0,0,0, 0.2);
     padding: 10px;
     color: #fff;
     text-decoration: none;
@@ -215,15 +214,8 @@ a:active {
 .section-landing .slogan {
     padding-top: 5vh;
     display: inline-block;
-    background: rgba(0,0,0, 0.2);
-    padding: 10px;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    margin-bottom: 10px;
-    max-width: 70%;
-}
-.section-landing .slogan-source {
-    color: #ccc;
+    margin-bottom: 2px;
+    max-width: 36%;
 }
 .section-landing .slogan:before {
     content: '“';
@@ -231,9 +223,25 @@ a:active {
 .section-landing .slogan:after {
     content: '”';
 }
-.section-landing .slogan, .slogan-source {
+.section-landing .slogan-source {
+    display: inline-block;
+    margin-bottom: 10px;
+    max-width: 17%;
+}
+
+.section-landing .slogan,
+.section-landing .slogan-source {
+    color: #ddd;
     position: relative;
+    padding: 10px;
     z-index: 5;
+}
+
+.section-landing .next-gig,
+.section-landing .slogan,
+.section-landing .slogan-source {
+    background: rgba(0,0,0, 0.45);
+    border-radius: 7px;
 }
 
 .horse {

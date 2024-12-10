@@ -1,5 +1,19 @@
 [  
   {
+    "date": "2025-02-21",
+    "time": "20:00",
+    "title": "Subchor wird 15",
+    "location": "Replugged, Lerchenfelder Str. 23, 1070 Wien"
+  },
+  {
+    "date": "2024-12-14",
+    "time": "19:00",
+    "title": "Wintermarkt Studio Walls",
+    "location": "Studio Walls, Löhrgasse 9/1-3, 1150 Wien",
+    "flyer": "img/flyer/2024-12-14-studio-walls-wintermarkt.jpg",
+    "link": "https://www.instagram.com/studiowallsvienna/p/DCpDhPbuM5Y"
+  },
+  {
     "date": "2024-09-20",
     "time": "19:00",
     "title": "Park(ing) day",

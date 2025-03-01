@@ -196,6 +196,7 @@ a:active {
     position: relative;
     top: 20px;
     transition: all ease-out 0.2s;
+    line-height: 40px;
 }
 .next-gig:empty {
     visibility: hidden;
@@ -226,7 +227,7 @@ a:active {
 .section-landing .slogan-source {
     display: inline-block;
     margin-bottom: 10px;
-    max-width: 17%;
+    max-width: 35%;
 }
 
 .section-landing .slogan,
